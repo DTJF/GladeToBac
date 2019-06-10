@@ -1,0 +1,73 @@
+ToDo:
+Beim Lesen: checken, welche Dateien vorhanden sind, ggf. Checkboxen aktivieren, Entries gem. xyz.bas ausfüllen, inaktiv schalten.
+
+GladeToBac 3.2.2 2019-06-xx:
+
+*new: project hosting at github
+*new: searching for folder data
+*bugfix: GtkListBox activates correct license now
+*bugfix: FreeBASIC 32 bit code fixed, ready for 64 bit now
+*bugfix: adapted to GTK-3.10 and later
+
+GladeToBac 3.2 2012-10-xx:
+new: XYZ_gui.bas removed, code now integrated in XYZ_tobac.bas
+new: english error texts for code insert
+new: '@' for STRING code generation (due to change in GTK headers)
+adjusted: END 0 removed from main file xyz.bas (it prevents automatic call of UDT DESTRUCTORs)
+adjusted: __USE_GTK3__ instead of __FB_GTK3__
+adjusted: __USE_GTK_OLD__ not used anymore (no support in gtk/gtk.bi since fbc-0.24)
+*bugfix: key for "Load / Analyse" is <Crtl>+"O" now
+*bugfix: list scrolls to the end while killing single deprecated handlers
+*bugfix: kill deprecated handlers is working again
+*bugfix: g_error_free(meld) added in xyz_tobac.bas
+
+GladeToBac 3.0.0.2 2011-09-21:
+*bugfix: I18N works now even if the tobac folder doesn't exist
+*bugfix: search algo for signal handlers improved (works now)
+*bugfix: libintl.bi macros (LC_xxx) and #INCLIB "iconv" (win) fixed
+*bugfix: GTK-2.22.0_TFK some macros renamed (no _TJF extension) and equal named function extended by _TJF
+*bugfix: GTK-2.22.0_TFK new macros in gmessage
+*bugfix: gobject.bi and gtk.bi small fixes
+
+GladeToBac 3.0 2011-06-01:
+new: GTK3 compatible, new header structure (core libs spread over 14 files)
+new: .ini files for projects, separate windows and LINUX path
+new: I18N support, libintl.bi included
+new: Option -len removed, Menu Help->English / Help->Deutsch removed
+bugfix: *.lic new formated
+
+
+Version 2.2.4 2010-11-04:
+Header GTKGlExt-1.2_TJF.bi hinzugefügt
+Header GTK-2.22.0_TJF.bi: BYVAL eingefügt (http://www.freebasic.net/forum/viewtopic.php?p=147197#147197)
+Header GTK-2.22.0_TJF.bi: aufgeräumt
+Bugfix Signals (http://www.freebasic.net/forum/viewtopic.php?t=16779)
+
+Version 2.2.1 2010-10-24:
+Fehler bei Start von Kommandozeile behoben (Pfad und Dateinamen
+wurden falsch ausgewertet, wenn .ui File benutzt wurde).
+Signals.def: Datei wird ausgewertet und erlaubt die Erzeugung von Signalspezifischen Parameterlisten.
+Einige Tooltip-Texte hinzugefügt, andere überarbeitet.
+
+Version 2.2.0 2010-03-28:
+GtkBuilder: Quelltext erzeugen und eigenen Quelltext umgestellt, neue .ui Datei
+TYPE: Verwendung einer TYPE Strukur im erzeugten Quelltext
+GTK-2.18.6_TJF.bi in Paket eingefügt
+Kleine bugfixes
+
+Version 2.0.2 2009-10-28:
+Icon eingebunden
+Bugfix bei Werten aus *.ini-Datei: auch leere Felder werden jetzt akzeptiert, Pfad wird jetzt verwendet
+
+Version 2.0 2009-10-28:
+tobac-Ordner: Die Callbacks können jetzt in separatem Ordner "gehalten" werden.
+Widget Referenzen: Fehlerbehebung bei der Prüfung der Widget-Referenzen, z.B. bei Minuszeichen im Namen.
+Callback Referenzen: Doppelter Aufruf eines CB wird jetzt erkannt, CB-Sub nur einmal eingebunden.
+Optisch Quelltext: Der Header von Callbacks wird optisch ansprechender formatiert (keine überlangen Zeilen mehr)
+Anzeige des Dateinamens: jetzt mit korrekter utf8-Codierung.
+Anzeige des Programmnamens: die Versionsnummer wird jetzt im Fenstertitel ausgegeben.
+
+Version 1.1 2009-02-xx:
+Neue Dateistruktur: Dateien *_incl.bas und *_decl.bas entfallen, *_tobac.bas ist neu. Die Hauptdatei *.bas kann nun mit Quelltext gefüllt werden und wird nicht mehr Überschrieben.
+Widget Referenzen: Es werden nicht nur die Fenster (GTKwindow), sondern alle Widgets im Quelltext referenziert, welche bei der Benutzung von Glade3 benannt worden sind. Dazu wird geprüft, ob der Name des widgets (id=) von der automatischen Benennung in Glade3 abweicht. In diesem Fall wird ein GtkWidget PTR auf das widget erzeugt (Datei *_tobac.bas).
+Zugriffspfad bei Dateiauswahl: Beim ersten Laden der *.glade-Datei wird der Pfad des Programmaufrufes vorgegeben. Bei weiterem Laden wird dann der zuletzt ausgewählte Pfad vorgegeben (in den Vorversionen war es der Pfad des Programmaufrufes).

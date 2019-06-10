@@ -1,0 +1,2218 @@
+The "destroy" signal
+
+void user_function( GObject *object, gpointer)
+
+The "activate-link" signal
+
+gboolean user_function( GtkAboutDialog *label,
+ gchar *uri,
+ gpointer)
+
+The "accel-activate" signal
+
+gboolean user_function( GtkAccelGroup *accel_group,
+ GObject *acceleratable,
+ guint keyval,
+ GdkModifierType modifier,
+ gpointer)
+
+The "accel-changed" signal
+
+void user_function( GtkAccelGroup *accel_group,
+ guint keyval,
+ GdkModifierType modifier,
+ GClosure *accel_closure,
+ gpointer)
+
+The "changed" signal
+
+void user_function( GtkAccelMap *object,
+ gchar *accel_path,
+ guint accel_key,
+ GdkModifierType accel_mods,
+ gpointer)
+
+The "activate" signal
+
+void user_function( GtkAction *action,
+ gpointer)
+
+The "connect-proxy" signal
+
+void user_function( GtkActionGroup *action_group,
+ GtkAction *action,
+ GtkWidget *proxy,
+ gpointer)
+
+The "disconnect-proxy" signal
+
+void user_function( GtkActionGroup *action_group,
+ GtkAction *action,
+ GtkWidget *proxy,
+ gpointer)
+
+The "post-activate" signal
+
+void user_function( GtkActionGroup *action_group,
+ GtkAction *action,
+ gpointer)
+
+The "pre-activate" signal
+
+void user_function( GtkActionGroup *action_group,
+ GtkAction *action,
+ gpointer)
+
+The "changed" signal
+
+void user_function( GtkAdjustment *adjustment,
+ gpointer)
+
+The "value-changed" signal
+
+void user_function( GtkAdjustment *adjustment,
+ gpointer)
+
+The "custom-item-activated" signal
+
+void user_function( GtkAppChooserButton *self,
+ gchar *item_name,
+ gpointer)
+
+The "window-added" signal
+
+void user_function (GtkApplication *application,
+ GtkWindow *window,
+ gpointer user_data)
+
+
+The "window-removed" signal
+
+void user_function (GtkApplication *application,
+ GtkWindow *window,
+ gpointer user_data)
+
+
+The "application-activated" signal
+
+void user_function( GtkAppChooserWidget *self,
+ GAppInfo *application,
+ gpointer)
+
+The "application-selected" signal
+
+void user_function( GtkAppChooserWidget *self,
+ GAppInfo *application,
+ gpointer)
+
+The "populate-popup" signal
+
+void user_function( GtkAppChooserWidget *self,
+ GtkMenu *menu,
+ GAppInfo *application,
+ gpointer)
+
+The "apply" signal
+
+void user_function( GtkAssistant *assistant,
+ gpointer)
+
+The "cancel" signal
+
+void user_function( GtkAssistant *assistant,
+ gpointer)
+
+The "close" signal
+
+void user_function( GtkAssistant *assistant,
+ gpointer)
+
+The "prepare" signal
+
+void user_function( GtkAssistant *assistant,
+ GtkWidget *page,
+ gpointer)
+
+The "activate" signal
+
+void user_function( GtkButton *widget,
+ gpointer)
+
+The "clicked" signal
+
+void user_function( GtkButton *button,
+ gpointer)
+
+The "enter" signal
+
+void user_function( GtkButton *button,
+ gpointer)
+
+The "leave" signal
+
+void user_function( GtkButton *button,
+ gpointer)
+
+The "pressed" signal
+
+void user_function( GtkButton *button,
+ gpointer)
+
+The "released" signal
+
+void user_function( GtkButton *button,
+ gpointer)
+
+The "day-selected" signal
+
+void user_function( GtkCalendar *calendar,
+ gpointer)
+
+The "day-selected-double-click" signal
+
+void user_function( GtkCalendar *calendar,
+ gpointer)
+
+The "month-changed" signal
+
+void user_function( GtkCalendar *calendar,
+ gpointer)
+
+The "next-month" signal
+
+void user_function( GtkCalendar *calendar,
+ gpointer)
+
+The "next-year" signal
+
+void user_function( GtkCalendar *calendar,
+ gpointer)
+
+The "prev-month" signal
+
+void user_function( GtkCalendar *calendar,
+ gpointer)
+
+The "prev-year" signal
+
+void user_function( GtkCalendar *calendar,
+ gpointer)
+
+The "add-editable" signal
+
+void user_function( GtkCellArea *area,
+ GtkCellRenderer *renderer,
+ GtkCellEditable *editable,
+ GdkRectangle *cell_area,
+ gchar *path,
+ gpointer)
+
+The "apply-attributes" signal
+
+void user_function( GtkCellArea *area,
+ GtkTreeModel *model,
+ GtkTreeIter *iter,
+ gboolean is_expander,
+ gboolean is_expanded,
+ gpointer)
+
+The "focus-changed" signal
+
+void user_function( GtkCellArea *area,
+ GtkCellRenderer *renderer,
+ gchar *path,
+ gpointer)
+
+The "remove-editable" signal
+
+void user_function( GtkCellArea *area,
+ GtkCellRenderer *renderer,
+ GtkCellEditable *editable,
+ gpointer)
+
+The "editing-done" signal
+
+void user_function( GtkCellEditable *cell_editable,
+ gpointer)
+
+The "remove-widget" signal
+
+void user_function( GtkCellEditable *cell_editable,
+ gpointer)
+
+The "editing-canceled" signal
+
+void user_function( GtkCellRenderer *renderer,
+ gpointer)
+
+The "editing-started" signal
+
+void user_function( GtkCellRenderer *renderer,
+ GtkCellEditable *editable,
+ gchar *path,
+ gpointer)
+
+The "accel-cleared" signal
+
+void user_function( GtkCellRendererAccel *accel,
+ gchar *path_string,
+ gpointer)
+
+The "accel-edited" signal
+
+void user_function( GtkCellRendererAccel *accel,
+ gchar *path_string,
+ guint accel_key,
+ GdkModifierType accel_mods,
+ guint hardware_keycode,
+ gpointer)
+
+The "changed" signal
+
+void user_function( GtkCellRendererCombo *combo,
+ gchar *path_string,
+ GtkTreeIter *new_iter,
+ gpointer)
+
+The "edited" signal
+
+void user_function( GtkCellRendererText *renderer,
+ gchar *path,
+ gchar *new_text,
+ gpointer)
+
+The "toggled" signal
+
+void user_function( GtkCellRendererToggle *cell_renderer,
+ gchar *path,
+ gpointer)
+
+The "toggled" signal
+
+void user_function( GtkCheckMenuItem *checkmenuitem,
+ gpointer)
+
+The "owner-change" signal
+
+void user_function( GtkClipboard *clipboard,
+ GdkEvent *event,
+ gpointer)
+
+The "color-set" signal
+
+void user_function( GtkColorButton *widget,
+ gpointer)
+
+The "color-changed" signal
+
+void user_function( GtkColorSelection *colorselection,
+ gpointer)
+
+The "changed" signal
+
+void user_function( GtkComboBox *widget,
+ gpointer)
+
+The "move-active" signal
+
+void user_function( GtkComboBox *widget,
+ GtkScrollType scroll_type,
+ gpointer)
+
+The "popdown" signal
+
+gboolean user_function( GtkComboBox *button,
+ gpointer)
+
+The "popup" signal
+
+void user_function( GtkComboBox *widget,
+ gpointer)
+The "add" signal
+
+void user_function( GtkContainer *container,
+ GtkWidget *widget,
+ gpointer)
+
+The "check-resize" signal
+
+void user_function( GtkContainer *container,
+ gpointer)
+
+The "remove" signal
+
+void user_function( GtkContainer *container,
+ GtkWidget *widget,
+ gpointer)
+
+The "set-focus-child" signal
+
+void user_function( GtkContainer *container,
+ GtkWidget *widget,
+ gpointer)
+
+The "close" signal
+
+void user_function( GtkDialog *arg0,
+ gpointer)
+
+The "response" signal
+
+void user_function( GtkDialog *dialog,
+ gint response_id,
+ gpointer)
+
+The "changed" signal
+
+void user_function( GtkEditable *editable,
+ gpointer)
+
+The "delete-text" signal
+
+void user_function( GtkEditable *editable,
+ gint start_pos,
+ gint end_pos,
+ gpointer)
+
+The "insert-text" signal
+
+void user_function( GtkEditable *editable,
+ gchar *new_text,
+ gint new_text_length,
+ gpointer position,
+ gpointer)
+
+The "activate" signal
+
+void user_function( GtkEntry *entry,
+ gpointer)
+
+The "backspace" signal
+
+void user_function( GtkEntry *entry,
+ gpointer)
+
+The "copy-clipboard" signal
+
+void user_function( GtkEntry *entry,
+ gpointer)
+
+The "cut-clipboard" signal
+
+void user_function( GtkEntry *entry,
+ gpointer)
+
+The "delete-from-cursor" signal
+
+void user_function( GtkEntry *entry,
+ GtkDeleteType type,
+ gint count,
+ gpointer)
+
+The "icon-press" signal
+
+void user_function( GtkEntry *entry,
+ GtkEntryIconPosition icon_pos,
+ GdkEvent *event,
+ gpointer)
+
+The "icon-release" signal
+
+void user_function( GtkEntry *entry,
+ GtkEntryIconPosition icon_pos,
+ GdkEvent *event,
+ gpointer)
+
+The "insert-at-cursor" signal
+
+void user_function( GtkEntry *entry,
+ gchar *string,
+ gpointer)
+
+The "move-cursor" signal
+
+void user_function( GtkEntry *entry,
+ GtkMovementStep step,
+ gint count,
+ gboolean extend_selection,
+ gpointer)
+
+The "paste-clipboard" signal
+
+void user_function( GtkEntry *entry,
+ gpointer)
+
+The "populate-popup" signal
+
+void user_function( GtkEntry *entry,
+ GtkMenu *menu,
+ gpointer)
+
+The "preedit-changed" signal
+
+void user_function( GtkEntry *entry,
+ gchar *preedit,
+ gpointer)
+
+The "toggle-overwrite" signal
+
+void user_function( GtkEntry *entry,
+ gpointer)
+
+The "deleted-text" signal
+
+void user_function( GtkEntryBuffer *buffer,
+ guint position,
+ guint n_chars,
+ gpointer)
+
+The "inserted-text" signal
+
+void user_function( GtkEntryBuffer *buffer,
+ guint position,
+ gchar *chars,
+ guint n_chars,
+ gpointer)
+
+The "action-activated" signal
+
+void user_function( GtkEntryCompletion *widget,
+ gint index,
+ gpointer)
+
+The "cursor-on-match" signal
+
+gboolean user_function( GtkEntryCompletion *widget,
+ GtkTreeModel *model,
+ GtkTreeIter *iter,
+ gpointer)
+
+The "insert-prefix" signal
+
+gboolean user_function( GtkEntryCompletion *widget,
+ gchar *prefix,
+ gpointer)
+
+The "match-selected" signal
+
+gboolean user_function( GtkEntryCompletion *widget,
+ GtkTreeModel *model,
+ GtkTreeIter *iter,
+ gpointer)
+
+The "activate" signal
+
+void user_function( GtkExpander *expander,
+ gpointer)
+
+The "confirm-overwrite" signal
+
+ GtkFileChooserConfirmationuser_function( GtkFileChooser *chooser,
+ gpointer)
+The "current-folder-changed" signal
+
+void user_function( GtkFileChooser *chooser,
+ gpointer)
+
+The "file-activated" signal
+
+void user_function( GtkFileChooser *chooser,
+ gpointer)
+
+The "selection-changed" signal
+
+void user_function( GtkFileChooser *chooser,
+ gpointer)
+
+The "update-preview" signal
+
+void user_function( GtkFileChooser *chooser,
+ gpointer)
+
+The "file-set" signal
+
+void user_function( GtkFileChooserButton *widget,
+ gpointer)
+
+The "font-set" signal
+
+void user_function( GtkFontButton *widget,
+ gpointer)
+
+The "child-attached" signal
+
+void user_function( GtkHandleBox *handlebox,
+ GtkWidget *widget,
+ gpointer)
+
+The "child-detached" signal
+
+void user_function( GtkHandleBox *handlebox,
+ GtkWidget *widget,
+ gpointer)
+
+The "changed" signal
+
+void user_function( GtkHSV *hsv,
+ gpointer)
+
+The "move" signal
+
+void user_function( GtkHSV *hsv,
+ GtkDirectionType arg1,
+ gpointer)
+
+The "changed" signal
+
+void user_function( GtkIconTheme *icon_theme,
+ gpointer)
+
+The "activate-cursor-item" signal
+
+gboolean user_function( GtkIconView *iconview,
+ gpointer)
+
+The "item-activated" signal
+
+void user_function( GtkIconView *iconview,
+ GtkTreePath *path,
+ gpointer)
+
+The "move-cursor" signal
+
+gboolean user_function( GtkIconView *iconview,
+ GtkMovementStep step,
+ gint count,
+ gpointer)
+
+The "select-all" signal
+
+void user_function( GtkIconView *iconview,
+ gpointer)
+
+The "select-cursor-item" signal
+
+void user_function( GtkIconView *iconview,
+ gpointer)
+
+The "selection-changed" signal
+
+void user_function( GtkIconView *iconview,
+ gpointer)
+
+The "toggle-cursor-item" signal
+
+void user_function( GtkIconView *iconview,
+ gpointer)
+
+The "unselect-all" signal
+
+void user_function( GtkIconView *iconview,
+ gpointer)
+
+The "commit" signal
+
+void user_function( GtkIMContext *context,
+ gchar *str,
+ gpointer)
+
+The "delete-surrounding" signal
+
+gboolean user_function( GtkIMContext *context,
+ gint offset,
+ gint n_chars,
+ gpointer)
+
+The "preedit-changed" signal
+
+void user_function( GtkIMContext *context,
+ gpointer)
+
+The "preedit-end" signal
+
+void user_function( GtkIMContext *context,
+ gpointer)
+
+The "preedit-start" signal
+
+void user_function( GtkIMContext *context,
+ gpointer)
+
+The "retrieve-surrounding" signal
+
+gboolean user_function( GtkIMContext *context,
+ gpointer)
+
+The "close" signal
+
+void user_function( GtkInfoBar *arg0,
+ gpointer)
+
+The "response" signal
+
+void user_function( GtkInfoBar *info_bar,
+ gint response_id,
+ gpointer)
+
+The "activate-current-link" signal
+
+void user_function( GtkLabel *label,
+ gpointer)
+
+The "activate-link" signal
+
+gboolean user_function( GtkLabel *label,
+ gchar *uri,
+ gpointer)
+
+The "copy-clipboard" signal
+
+void user_function( GtkLabel *label,
+ gpointer)
+
+The "move-cursor" signal
+
+void user_function( GtkLabel *entry,
+ GtkMovementStep step,
+ gint count,
+ gboolean extend_selection,
+ gpointer)
+
+The "populate-popup" signal
+
+void user_function( GtkLabel *label,
+ GtkMenu *menu,
+ gpointer)
+
+The "activate-link" signal
+
+gboolean user_function( GtkLinkButton *button,
+ gpointer)
+
+The "move-scroll" signal
+
+void user_function( GtkMenu *menu,
+ GtkScrollType scroll_type,
+ gpointer)
+
+The "activate" signal
+
+void user_function( GtkMenuItem *menuitem,
+ gpointer)
+
+The "activate-item" signal
+
+void user_function( GtkMenuItem *menuitem,
+ gpointer)
+
+The "deselect" signal
+
+void user_function( GtkMenuItem *menuitem,
+ gpointer)
+
+The "select" signal
+
+void user_function( GtkMenuItem *menuitem,
+ gpointer)
+
+The "toggle-size-allocate" signal
+
+void user_function( GtkMenuItem *menuitem,
+ gint arg1,
+ gpointer)
+
+The "toggle-size-request" signal
+
+void user_function( GtkMenuItem *menuitem,
+ gpointer arg1,
+ gpointer)
+
+The "activate-current" signal
+
+void user_function( GtkMenuShell *menushell,
+ gboolean force_hide,
+ gpointer)
+
+The "cancel" signal
+
+void user_function( GtkMenuShell *menushell,
+ gpointer)
+
+The "cycle-focus" signal
+
+void user_function( GtkMenuShell *menushell,
+ GtkDirectionType direction,
+ gpointer)
+
+The "deactivate" signal
+
+void user_function( GtkMenuShell *menushell,
+ gpointer)
+
+The "insert" signal
+
+void user_function(
+ GtkMenuShell *menu_shell,
+ GtkWidget *child,
+ gint position,
+ gpointer user_data)
+
+
+The "move-current" signal
+
+void user_function( GtkMenuShell *menushell,
+ GtkMenuDirectionType direction,
+ gpointer)
+
+The "move-selected" signal
+
+gboolean user_function( GtkMenuShell *menu_shell,
+ gint distance,
+ gpointer)
+
+The "selection-done" signal
+
+void user_function( GtkMenuShell *menushell,
+ gpointer)
+
+The "show-menu" signal
+
+void user_function( GtkMenuToolButton *button,
+ gpointer)
+
+The "change-current-page" signal
+
+gboolean user_function( GtkNotebook *notebook,
+ gint arg1,
+ gpointer)
+
+The "create-window" signal
+
+ GtkNotebook* user_function( GtkNotebook *notebook,
+ GtkWidget *page,
+ gint x,
+ gint y,
+ gpointer)
+
+The "focus-tab" signal
+
+gboolean user_function( GtkNotebook *notebook,
+ GtkNotebookTab arg1,
+ gpointer)
+
+The "move-focus-out" signal
+
+void user_function( GtkNotebook *notebook,
+ GtkDirectionType arg1,
+ gpointer)
+
+The "page-added" signal
+
+void user_function( GtkNotebook *notebook,
+ GtkWidget *child,
+ guint page_num,
+ gpointer)
+
+The "page-removed" signal
+
+void user_function( GtkNotebook *notebook,
+ GtkWidget *child,
+ guint page_num,
+ gpointer)
+
+The "page-reordered" signal
+
+void user_function( GtkNotebook *notebook,
+ GtkWidget *child,
+ guint page_num,
+ gpointer)
+
+The "reorder-tab" signal
+
+gboolean user_function( GtkNotebook *notebook,
+ GtkDirectionType arg1,
+ gboolean arg2,
+ gpointer)
+
+The "select-page" signal
+
+gboolean user_function( GtkNotebook *notebook,
+ gboolean arg1,
+ gpointer)
+
+The "switch-page" signal
+
+void user_function( GtkNotebook *notebook,
+ GtkWidget *page,
+ guint page_num,
+ gpointer)
+
+The "accept-position" signal
+
+gboolean user_function( GtkPaned *widget,
+ gpointer)
+
+The "cancel-position" signal
+
+gboolean user_function( GtkPaned *widget,
+ gpointer)
+
+The "cycle-child-focus" signal
+
+gboolean user_function( GtkPaned *widget,
+ gboolean reversed,
+ gpointer)
+
+The "cycle-handle-focus" signal
+
+gboolean user_function( GtkPaned *widget,
+ gboolean reversed,
+ gpointer)
+
+The "move-handle" signal
+
+gboolean user_function( GtkPaned *widget,
+ GtkScrollType scroll_type,
+ gpointer)
+
+The "toggle-handle-focus" signal
+
+gboolean user_function( GtkPaned *widget,
+ gpointer)
+
+The "embedded" signal
+
+void user_function( GtkPlug *plug,
+ gpointer)
+
+The "details-acquired" signal
+
+void user_function( GtkPrinter *printer,
+ gboolean success,
+ gpointer)
+
+The "status-changed" signal
+
+void user_function( GtkPrintJob *job,
+ gpointer)
+
+The "begin-print" signal
+
+void user_function( GtkPrintOperation *operation,
+ GtkPrintContext *context,
+ gpointer)
+
+The "create-custom-widget" signal
+
+GObject* user_function( GtkPrintOperation *operation,
+ gpointer)
+
+The "custom-widget-apply" signal
+
+void user_function( GtkPrintOperation *operation,
+ GtkWidget *widget,
+ gpointer)
+
+The "done" signal
+
+void user_function( GtkPrintOperation *operation,
+ GtkPrintOperationResult result,
+ gpointer)
+
+The "draw-page" signal
+
+void user_function( GtkPrintOperation *operation,
+ GtkPrintContext *context,
+ gint page_nr,
+ gpointer)
+
+The "end-print" signal
+
+void user_function( GtkPrintOperation *operation,
+ GtkPrintContext *context,
+ gpointer)
+
+The "paginate" signal
+
+gboolean user_function( GtkPrintOperation *operation,
+ GtkPrintContext *context,
+ gpointer)
+
+The "preview" signal
+
+gboolean user_function( GtkPrintOperation *operation,
+ GtkPrintOperationPreview *preview,
+ GtkPrintContext *context,
+ GtkWindow *parent,
+ gpointer)
+
+The "request-page-setup" signal
+
+void user_function( GtkPrintOperation *operation,
+ GtkPrintContext *context,
+ gint page_nr,
+ GtkPageSetup *setup,
+ gpointer)
+
+The "status-changed" signal
+
+void user_function( GtkPrintOperation *operation,
+ gpointer)
+
+The "update-custom-widget" signal
+
+void user_function( GtkPrintOperation *operation,
+ GtkWidget *widget,
+ GtkPageSetup *setup,
+ GtkPrintSettings *settings,
+ gpointer)
+
+The "got-page-size" signal
+
+void user_function( GtkPrintOperationPreview *preview,
+ GtkPrintContext *context,
+ GtkPageSetup *page_setup,
+ gpointer)
+
+The "ready" signal
+
+void user_function( GtkPrintOperationPreview *preview,
+ GtkPrintContext *context,
+ gpointer)
+
+The "changed" signal
+
+void user_function( GtkRadioAction *action,
+ GtkRadioAction *current,
+ gpointer)
+
+The "group-changed" signal
+
+void user_function( GtkRadioButton *button,
+ gpointer)
+
+The "group-changed" signal
+
+void user_function( GtkRadioMenuItem *radiomenuitem,
+ gpointer)
+
+The "adjust-bounds" signal
+
+void user_function( GtkRange *range,
+ gdouble value,
+ gpointer)
+
+The "change-value" signal
+
+gboolean user_function( GtkRange *range,
+ GtkScrollType scroll,
+ gdouble value,
+ gpointer)
+
+The "move-slider" signal
+
+void user_function( GtkRange *range,
+ GtkScrollType step,
+ gpointer)
+
+The "value-changed" signal
+
+void user_function( GtkRange *range,
+ gpointer)
+
+The "item-activated" signal
+
+void user_function( GtkRecentChooser *chooser,
+ gpointer)
+
+The "selection-changed" signal
+
+void user_function( GtkRecentChooser *chooser,
+ gpointer)
+
+The "changed" signal
+
+void user_function( GtkRecentManager *recent_manager,
+ gpointer)
+
+The "format-value" signal
+
+gchar* user_function( GtkScale *scale,
+ gdouble value,
+ gpointer)
+
+The "popdown" signal
+
+void user_function( GtkScaleButton *button,
+ gpointer)
+
+The "popup" signal
+
+void user_function( GtkScaleButton *button,
+ gpointer)
+
+The "value-changed" signal
+
+void user_function( GtkScaleButton *button,
+ gdouble value,
+ gpointer)
+
+The "move-focus-out" signal
+
+void user_function( GtkScrolledWindow *scrolled_window,
+ GtkDirectionType direction_type,
+ gpointer)
+
+The "scroll-child" signal
+
+gboolean user_function( GtkScrolledWindow *scrolled_window,
+ GtkScrollType scroll,
+ gboolean horizontal,
+ gpointer)
+
+The "plug-added" signal
+
+void user_function( GtkSocket *socket_,
+ gpointer)
+
+The "plug-removed" signal
+
+gboolean user_function( GtkSocket *socket_,
+ gpointer)
+
+The "change-value" signal
+
+void user_function( GtkSpinButton *spinbutton,
+ GtkScrollType arg1,
+ gpointer)
+
+The "input" signal
+
+gint user_function( GtkSpinButton *spin_button,
+ gpointer new_value,
+ gpointer)
+
+The "output" signal
+
+gboolean user_function( GtkSpinButton *spin_button,
+ gpointer)
+
+The "value-changed" signal
+
+void user_function( GtkSpinButton *spinbutton,
+ gpointer)
+
+The "wrapped" signal
+
+void user_function( GtkSpinButton *spinbutton,
+ gpointer)
+
+The "text-popped" signal
+
+void user_function( GtkStatusbar *statusbar,
+ guint context_id,
+ gchar *text,
+ gpointer)
+
+The "text-pushed" signal
+
+void user_function( GtkStatusbar *statusbar,
+ guint context_id,
+ gchar *text,
+ gpointer)
+
+The "activate" signal
+
+void user_function( GtkStatusIcon *status_icon,
+ gpointer)
+
+
+The "button-press-event" signal
+
+gboolean user_function( GtkStatusIcon *status_icon,
+ GdkEvent *event,
+ gpointer)
+
+The "button-release-event" signal
+
+gboolean user_function( GtkStatusIcon *status_icon,
+ GdkEvent *event,
+ gpointer)
+
+The "popup-menu" signal
+
+void user_function( GtkStatusIcon *status_icon,
+ guint button,
+ guint activate_time,
+ gpointer)
+
+The "query-tooltip" signal
+
+gboolean user_function( GtkStatusIcon *status_icon,
+ gint x,
+ gint y,
+ gboolean keyboard_mode,
+ GtkTooltip *tooltip,
+ gpointer)
+
+The "scroll-event" signal
+
+gboolean user_function( GtkStatusIcon *status_icon,
+ GdkEvent *event,
+ gpointer)
+
+The "size-changed" signal
+
+gboolean user_function( GtkStatusIcon *status_icon,
+ gint size,
+ gpointer)
+
+The "realize" signal
+
+void user_function( GtkStyle *style,
+ gpointer)
+
+The "unrealize" signal
+
+void user_function( GtkStyle *style,
+ gpointer)
+
+The "changed" signal
+
+void user_function( GtkStyleContext *stylecontext,
+ gpointer)
+
+The "activate" signal
+
+void user_function( GtkSwitch *widget,
+ gpointer)
+
+The "apply-tag" signal
+
+void user_function( GtkTextBuffer *textbuffer,
+ GtkTextTag *tag,
+ GtkTextIter *start,
+ GtkTextIter *end,
+ gpointer)
+
+The "begin-user-action" signal
+
+void user_function( GtkTextBuffer *textbuffer,
+ gpointer)
+
+The "changed" signal
+
+void user_function( GtkTextBuffer *textbuffer,
+ gpointer)
+
+The "delete-range" signal
+
+void user_function( GtkTextBuffer *textbuffer,
+ GtkTextIter *start,
+ GtkTextIter *end,
+ gpointer)
+
+The "end-user-action" signal
+
+void user_function( GtkTextBuffer *textbuffer,
+ gpointer)
+
+The "insert-child-anchor" signal
+
+void user_function( GtkTextBuffer *textbuffer,
+ GtkTextIter *location,
+ GtkTextChildAnchor *anchor,
+ gpointer)
+
+The "insert-pixbuf" signal
+
+void user_function( GtkTextBuffer *textbuffer,
+ GtkTextIter *location,
+ GdkPixbuf *pixbuf,
+ gpointer)
+
+The "insert-text" signal
+
+void user_function( GtkTextBuffer *textbuffer,
+ GtkTextIter *location,
+ gchar *text,
+ gint len,
+ gpointer)
+
+The "mark-deleted" signal
+
+void user_function( GtkTextBuffer *textbuffer,
+ GtkTextMark *mark,
+ gpointer)
+
+The "mark-set" signal
+
+void user_function( GtkTextBuffer *textbuffer,
+ GtkTextIter *location,
+ GtkTextMark *mark,
+ gpointer)
+
+The "modified-changed" signal
+
+void user_function( GtkTextBuffer *textbuffer,
+ gpointer)
+
+The "paste-done" signal
+
+void user_function( GtkTextBuffer *textbuffer,
+ GtkClipboard *arg1,
+ gpointer)
+
+The "remove-tag" signal
+
+void user_function( GtkTextBuffer *textbuffer,
+ GtkTextTag *tag,
+ GtkTextIter *start,
+ GtkTextIter *end,
+ gpointer)
+
+The "event" signal
+
+gboolean user_function( GtkTextTag *tag,
+ GObject *object,
+ GdkEvent *event,
+ GtkTextIter *iter,
+ gpointer)
+
+The "tag-added" signal
+
+void user_function( GtkTextTagTable *texttagtable,
+ GtkTextTag *tag,
+ gpointer)
+
+The "tag-changed" signal
+
+void user_function( GtkTextTagTable *texttagtable,
+ GtkTextTag *tag,
+ gboolean size_changed,
+ gpointer)
+
+The "tag-removed" signal
+
+void user_function( GtkTextTagTable *texttagtable,
+ GtkTextTag *tag,
+ gpointer)
+
+The "backspace" signal
+
+void user_function( GtkTextView *text_view,
+ gpointer)
+
+The "copy-clipboard" signal
+
+void user_function( GtkTextView *text_view,
+ gpointer)
+
+The "cut-clipboard" signal
+
+void user_function( GtkTextView *text_view,
+ gpointer)
+
+The "delete-from-cursor" signal
+
+void user_function( GtkTextView *text_view,
+ GtkDeleteType type,
+ gint count,
+ gpointer)
+
+The "insert-at-cursor" signal
+
+void user_function( GtkTextView *text_view,
+ gchar *string,
+ gpointer)
+
+The "move-cursor" signal
+
+void user_function( GtkTextView *text_view,
+ GtkMovementStep step,
+ gint count,
+ gboolean extend_selection,
+ gpointer)
+
+The "move-viewport" signal
+
+void user_function( GtkTextView *text_view,
+ GtkScrollStep step,
+ gint count,
+ gpointer)
+
+The "paste-clipboard" signal
+
+void user_function( GtkTextView *text_view,
+ gpointer)
+
+The "populate-popup" signal
+
+void user_function( GtkTextView *entry,
+ GtkMenu *menu,
+ gpointer)
+
+The "preedit-changed" signal
+
+void user_function( GtkTextView *text_view,
+ gchar *preedit,
+ gpointer)
+
+The "select-all" signal
+
+void user_function( GtkTextView *text_view,
+ gboolean select,
+ gpointer)
+
+The "set-anchor" signal
+
+void user_function( GtkTextView *text_view,
+ gpointer)
+
+The "toggle-cursor-visible" signal
+
+void user_function( GtkTextView *text_view,
+ gpointer)
+
+The "toggle-overwrite" signal
+
+void user_function( GtkTextView *text_view,
+ gpointer)
+
+The "toggled" signal
+
+void user_function( GtkToggleAction *toggleaction,
+ gpointer)
+
+The "toggled" signal
+
+void user_function( GtkToggleButton *togglebutton,
+ gpointer)
+
+The "toggled" signal
+
+void user_function( GtkToggleToolButton *toggle_tool_button,
+ gpointer)
+
+The "focus-home-or-end" signal
+
+gboolean user_function( GtkToolbar *toolbar,
+ gboolean focus_home,
+ gpointer)
+
+The "orientation-changed" signal
+
+void user_function( GtkToolbar *toolbar,
+ GtkOrientation orientation,
+ gpointer)
+
+The "popup-context-menu" signal
+
+gboolean user_function( GtkToolbar *toolbar,
+ gint x,
+ gint y,
+ gint button,
+ gpointer)
+
+The "style-changed" signal
+
+void user_function( GtkToolbar *toolbar,
+ GtkToolbarStyle style,
+ gpointer)
+
+The "clicked" signal
+
+void user_function( GtkToolButton *toolbutton,
+ gpointer)
+
+The "create-menu-proxy" signal
+
+gboolean user_function( GtkToolItem *tool_item,
+ gpointer)
+
+The "toolbar-reconfigured" signal
+
+void user_function( GtkToolItem *tool_item,
+ gpointer)
+
+The "row-changed" signal
+
+void user_function( GtkTreeModel *tree_model,
+ GtkTreePath *path,
+ GtkTreeIter *iter,
+ gpointer)
+
+The "row-deleted" signal
+
+void user_function( GtkTreeModel *tree_model,
+ GtkTreePath *path,
+ gpointer)
+
+The "row-has-child-toggled" signal
+
+void user_function( GtkTreeModel *tree_model,
+ GtkTreePath *path,
+ GtkTreeIter *iter,
+ gpointer)
+
+The "row-inserted" signal
+
+void user_function( GtkTreeModel *tree_model,
+ GtkTreePath *path,
+ GtkTreeIter *iter,
+ gpointer)
+
+The "rows-reordered" signal
+
+void user_function( GtkTreeModel *tree_model,
+ GtkTreePath *path,
+ GtkTreeIter *iter,
+ gpointer new_order,
+ gpointer)
+
+The "changed" signal
+
+void user_function( GtkTreeSelection *treeselection,
+ gpointer)
+
+The "sort-column-changed" signal
+
+void user_function( GtkTreeSortable *sortable,
+ gpointer)
+
+The "columns-changed" signal
+
+void user_function( GtkTreeView *tree_view,
+ gpointer)
+
+The "cursor-changed" signal
+
+void user_function( GtkTreeView *tree_view,
+ gpointer)
+
+The "expand-collapse-cursor-row" signal
+
+gboolean user_function( GtkTreeView *treeview,
+ gboolean arg1,
+ gboolean arg2,
+ gboolean arg3,
+ gpointer)
+
+The "move-cursor" signal
+
+gboolean user_function( GtkTreeView *treeview,
+ GtkMovementStep arg1,
+ gint arg2,
+ gpointer)
+
+The "row-activated" signal
+
+void user_function( GtkTreeView *tree_view,
+ GtkTreePath *path,
+ GtkTreeViewColumn *column,
+ gpointer)
+
+The "row-collapsed" signal
+
+void user_function( GtkTreeView *tree_view,
+ GtkTreeIter *iter,
+ GtkTreePath *path,
+ gpointer)
+
+The "row-expanded" signal
+
+void user_function( GtkTreeView *tree_view,
+ GtkTreeIter *iter,
+ GtkTreePath *path,
+ gpointer)
+
+The "select-all" signal
+
+gboolean user_function( GtkTreeView *treeview,
+ gpointer)
+
+The "select-cursor-parent" signal
+
+gboolean user_function( GtkTreeView *treeview,
+ gpointer)
+
+The "select-cursor-row" signal
+
+gboolean user_function( GtkTreeView *treeview,
+ gboolean arg1,
+ gpointer)
+
+The "start-interactive-search" signal
+
+gboolean user_function( GtkTreeView *treeview,
+ gpointer)
+
+The "test-collapse-row" signal
+
+gboolean user_function( GtkTreeView *tree_view,
+ GtkTreeIter *iter,
+ GtkTreePath *path,
+ gpointer)
+
+The "test-expand-row" signal
+
+gboolean user_function( GtkTreeView *tree_view,
+ GtkTreeIter *iter,
+ GtkTreePath *path,
+ gpointer)
+
+The "toggle-cursor-row" signal
+
+gboolean user_function( GtkTreeView *treeview,
+ gpointer)
+
+The "unselect-all" signal
+
+gboolean user_function( GtkTreeView *treeview,
+ gpointer)
+
+The "clicked" signal
+
+void user_function( GtkTreeViewColumn *treeviewcolumn,
+ gpointer)
+
+The "actions-changed" signal
+
+void user_function( GtkUIManager *manager,
+ gpointer)
+
+The "add-widget" signal
+
+void user_function( GtkUIManager *manager,
+ GtkWidget *widget,
+ gpointer)
+
+The "connect-proxy" signal
+
+void user_function( GtkUIManager *manager,
+ GtkAction *action,
+ GtkWidget *proxy,
+ gpointer)
+
+The "disconnect-proxy" signal
+
+void user_function( GtkUIManager *manager,
+ GtkAction *action,
+ GtkWidget *proxy,
+ gpointer)
+
+The "post-activate" signal
+
+void user_function( GtkUIManager *manager,
+ GtkAction *action,
+ gpointer)
+
+The "pre-activate" signal
+
+void user_function( GtkUIManager *manager,
+ GtkAction *action,
+ gpointer)
+
+The "accel-closures-changed" signal
+
+void user_function( GtkWidget *widget,
+ gpointer)
+
+The "button-press-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "button-release-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "can-activate-accel" signal
+
+gboolean user_function( GtkWidget *widget,
+ guint signal_id,
+ gpointer)
+
+The "child-notify" signal
+
+void user_function( GtkWidget *widget,
+ GParamSpec *pspec,
+ gpointer)
+
+The "composited-changed" signal
+
+void user_function( GtkWidget *widget,
+ gpointer)
+
+The "configure-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "damage-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "delete-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "destroy" signal
+
+void user_function( GtkWidget *object,
+ gpointer)
+
+
+The "destroy-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "direction-changed" signal
+
+void user_function( GtkWidget *widget,
+ GtkTextDirection previous_direction,
+ gpointer)
+
+The "drag-begin" signal
+
+void user_function( GtkWidget *widget,
+ GdkDragContext *drag_context,
+ gpointer)
+
+The "drag-data-delete" signal
+
+void user_function( GtkWidget *widget,
+ GdkDragContext *drag_context,
+ gpointer)
+
+The "drag-data-get" signal
+
+void user_function( GtkWidget *widget,
+ GdkDragContext *drag_context,
+ GtkSelectionData *data,
+ guint info,
+ guint time,
+ gpointer)
+
+The "drag-data-received" signal
+
+void user_function( GtkWidget *widget,
+ GdkDragContext *drag_context,
+ gint x,
+ gint y,
+ GtkSelectionData *data,
+ guint info,
+ guint time,
+ gpointer)
+
+The "drag-drop" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkDragContext *drag_context,
+ gint x,
+ gint y,
+ guint time,
+ gpointer)
+
+The "drag-end" signal
+
+void user_function( GtkWidget *widget,
+ GdkDragContext *drag_context,
+ gpointer)
+
+The "drag-failed" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkDragContext *drag_context,
+ GtkDragResult result,
+ gpointer)
+
+The "drag-leave" signal
+
+void user_function( GtkWidget *widget,
+ GdkDragContext *drag_context,
+ guint time,
+ gpointer)
+
+The "drag-motion" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkDragContext *drag_context,
+ gint x,
+ gint y,
+ guint time,
+ gpointer)
+
+The "draw" signal
+
+gboolean user_function( GtkWidget *widget,
+ CairoContext *cr,
+ gpointer)
+
+The "enter-notify-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "event-after" signal
+
+void user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "focus" signal
+
+gboolean user_function( GtkWidget *widget,
+ GtkDirectionType direction,
+ gpointer)
+
+The "focus-in-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "focus-out-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "grab-broken-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "grab-focus" signal
+
+void user_function( GtkWidget *widget,
+ gpointer)
+
+The "grab-notify" signal
+
+void user_function( GtkWidget *widget,
+ gboolean was_grabbed,
+ gpointer)
+
+The "hide" signal
+
+void user_function( GtkWidget *widget,
+ gpointer)
+
+The "hierarchy-changed" signal
+
+void user_function( GtkWidget *widget,
+ GtkWidget *previous_toplevel,
+ gpointer)
+
+The "key-press-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "key-release-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "keynav-failed" signal
+
+gboolean user_function( GtkWidget *widget,
+ GtkDirectionType direction,
+ gpointer)
+
+The "leave-notify-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "map" signal
+
+void user_function( GtkWidget *widget,
+ gpointer)
+
+The "map-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "mnemonic-activate" signal
+
+gboolean user_function( GtkWidget *widget,
+ gboolean arg1,
+ gpointer)
+
+The "motion-notify-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "move-focus" signal
+
+void user_function( GtkWidget *widget,
+ GtkDirectionType direction,
+ gpointer)
+
+The "parent-set" signal
+
+void user_function( GtkWidget *widget,
+ GtkWidget *old_parent,
+ gpointer)
+
+The "popup-menu" signal
+
+gboolean user_function( GtkWidget *widget,
+ gpointer)
+
+The "property-notify-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "proximity-in-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "proximity-out-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "query-tooltip" signal
+
+gboolean user_function( GtkWidget *widget,
+ gint x,
+ gint y,
+ gboolean keyboard_mode,
+ GtkTooltip *tooltip,
+ gpointer)
+
+The "realize" signal
+
+void user_function( GtkWidget *widget,
+ gpointer)
+
+The "screen-changed" signal
+
+void user_function( GtkWidget *widget,
+ GdkScreen *previous_screen,
+ gpointer)
+
+The "scroll-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "selection-clear-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "selection-get" signal
+
+void user_function( GtkWidget *widget,
+ GtkSelectionData *data,
+ guint info,
+ guint time,
+ gpointer)
+
+The "selection-notify-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "selection-received" signal
+
+void user_function( GtkWidget *widget,
+ GtkSelectionData *data,
+ guint time,
+ gpointer)
+
+The "selection-request-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "show" signal
+
+void user_function( GtkWidget *widget,
+ gpointer)
+
+The "show-help" signal
+
+gboolean user_function( GtkWidget *widget,
+ GtkWidgetHelpType help_type,
+ gpointer)
+
+The "size-allocate" signal
+
+void user_function( GtkWidget *widget,
+ GdkRectangle *allocation,
+ gpointer)
+
+The "state-changed" signal
+
+void user_function( GtkWidget *widget,
+ GtkStateType state,
+ gpointer)
+
+The "state-flags-changed" signal
+
+void user_function( GtkWidget *widget,
+ GtkStateFlags flags,
+ gpointer)
+
+The "style-set" signal
+
+void user_function( GtkWidget *widget,
+ GtkStyle *previous_style,
+ gpointer)
+
+The "style-updated" signal
+
+void user_function( GtkWidget *widget,
+ gpointer)
+
+The "unmap" signal
+
+void user_function( GtkWidget *widget,
+ gpointer)
+
+The "unmap-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "unrealize" signal
+
+void user_function( GtkWidget *widget,
+ gpointer)
+
+The "visibility-notify-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "window-state-event" signal
+
+gboolean user_function( GtkWidget *widget,
+ GdkEvent *event,
+ gpointer)
+
+The "activate-default" signal
+
+void user_function( GtkWindow *window,
+ gpointer)
+
+The "activate-focus" signal
+
+void user_function( GtkWindow *window,
+ gpointer)
+
+The "keys-changed" signal
+
+void user_function( GtkWindow *window,
+ gpointer)
+
+The "set-focus" signal
+
+void user_function( GtkWindow *window,
+ GtkWidget *widget,
+ gpointer)
+
+
+The "window-removed" signal
+
+void user_function (GtkApplication *application,
+ GtkWindow *window,
+ gpointer user_data)
+
+
+The "window-removed" signal
+
+void user_function (GtkApplication *application,
+ GtkWindow *window,
+ gpointer user_data)
+
+
+The "insert" signal
+
+void user_function (GtkMenuShell *menu_shell,
+ GtkWidget *child,
+ gint position,
+ gpointer user_data)
+
+
+The "color-activated" signal
+
+void user_function (GtkColorChooser *chooser,
+ GdkRGBA *color,
+ gpointer user_data)
+
+
+The "format-entry-text" signal
+
+gchar* user_function (GtkComboBox *combo,
+ gchar *path,
+ gpointer user_data)
+
+
+The "offset-changed" signal
+
+void user_function (GtkLevelBar *self,
+ gchar *name,
+ gpointer user_data)
+
+
+
+The "changed" signal
+
+void user_function (GdkDevice *device,
+ gpointer user_data)
+
+
+The "device-added" signal
+
+void user_function (GdkDeviceManager *device_manager,
+ GdkDevice *device,
+ gpointer user_data)
+
+
+The "device-changed" signal
+
+void user_function (GdkDeviceManager *device_manager,
+ GdkDevice *device,
+ gpointer user_data)
+
+
+The "device-removed" signal
+
+void user_function (GdkDeviceManager *device_manager,
+ GdkDevice *device,
+ gpointer user_data)
+
+
+The "closed" signal
+
+void user_function (GdkDisplay *display,
+ gboolean is_error,
+ gpointer user_data)
+
+
+The "opened" signal
+
+void user_function (GdkDisplay *display,
+ gpointer user_data)
+
+
+The "display-opened" signal
+
+void user_function (GdkDisplayManager *manager,
+ GdkDisplay *display,
+ gpointer user_data)
+
+
+The "direction-changed" signal
+
+void user_function (GdkKeymap *keymap,
+ gpointer user_data)
+
+
+The "keys-changed" signal
+
+void user_function (GdkKeymap *keymap,
+ gpointer user_data)
+
+
+The "state-changed" signal
+
+void user_function (GdkKeymap *keymap,
+ gpointer user_data)
+
+
+The "composited-changed" signal
+
+void user_function (GdkScreen *screen,
+ gpointer user_data)
+
+
+The "monitors-changed" signal
+
+void user_function (GdkScreen *screen,
+ gpointer user_data)
+
+
+The "size-changed" signal
+
+void user_function (GdkScreen *screen,
+ gpointer user_data)
+
+
+The "create-surface" signal
+
+CairoSurface* user_function (GdkWindow *window,
+ gint width,
+ gint height,
+ gpointer user_data)
+
+
+The "from-embedder" signal
+
+void user_function (GdkWindow *window,
+ gdouble embedder_x,
+ gdouble embedder_y,
+ gpointer offscreen_x,
+ gpointer offscreen_y,
+ gpointer user_data)
+
+
+The "pick-embedded-child" signal
+
+GdkWindow* user_function (GdkWindow *window,
+ gdouble x,
+ gdouble y,
+ gpointer user_data)
+
+
+The "to-embedder" signal
+
+void user_function (GdkWindow *window,
+ gdouble offscreen_x,
+ gdouble offscreen_y,
+ gpointer embedder_x,
+ gpointer embedder_y,
+ gpointer user_data)
+

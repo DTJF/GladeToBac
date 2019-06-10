@@ -1,0 +1,790 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR TJF
+# This file is distributed under the same license as the GladeToBac package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GladeToBac 3.2.2\n"
+"Report-Msgid-Bugs-To: Thomas[ dot ]Freiherr{ at }gmx{ dot }net\n"
+"POT-Creation-Date: 2019-06-10 12:34+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: on_ActLoad_activate.bas:19
+msgid "Load GUI-XML-file:"
+msgstr ""
+
+#: on_MnuHelp_activate.bas:19
+msgid "Help function"
+msgstr ""
+
+#: on_MnuHelp_activate.bas:21 GladeToBac.bas:73
+msgid "ReadMe"
+msgstr ""
+
+#: on_MnuHelp_activate.bas:32
+msgid "Command-line-help"
+msgstr ""
+
+#: on_MnuSaPa_activate.bas:20
+msgid "Save parameters"
+msgstr ""
+
+#: GladeToBac.bas:72
+msgid "Short help (for details see '"
+msgstr ""
+
+#: GladeToBac.bas:74
+msgid "Synopsis: "
+msgstr ""
+
+#: GladeToBac.bas:75
+msgid "FILE"
+msgstr ""
+
+#: GladeToBac.bas:75
+msgid "-OPTIONS"
+msgstr ""
+
+#: GladeToBac.bas:76
+msgid "  Example: "
+msgstr ""
+
+#: GladeToBac.bas:77
+msgid " Executes: "
+msgstr ""
+
+#: GladeToBac.bas:77
+msgid "in folder"
+msgstr ""
+
+#: GladeToBac.bas:78
+msgid "  Options: "
+msgstr ""
+
+#: GladeToBac.bas:78
+msgid "confirm sketching, external GUI-file,"
+msgstr ""
+
+#: GladeToBac.bas:79
+msgid "           create .pot file, use tobac folder"
+msgstr ""
+
+#: GladeToBac.bas:80
+msgid "runs through the steps"
+msgstr ""
+
+#: GladeToBac.bas:81
+msgid "1.) load GUI-XML-file and analyse"
+msgstr ""
+
+#: GladeToBac.bas:82
+msgid "2.) write .bas sources (switched by -n or -N)"
+msgstr ""
+
+#: GladeToBac.bas:83
+msgid "3.) create .pot file (switched by -x)"
+msgstr ""
+
+#: GladeToBac.bas:84
+msgid "4.) delete deprecated files (switched by -a or -A)"
+msgstr ""
+
+#: GladeToBac.bas:85
+msgid "If no regular file is specified the GUI will start."
+msgstr ""
+
+#: GladeToBac.bas:86
+msgid "Options (use minus all times, separated by space):"
+msgstr ""
+
+#: GladeToBac.bas:87
+msgid "-h help (print this text and end)"
+msgstr ""
+
+#: GladeToBac.bas:88
+msgid "-v version: show version info and end"
+msgstr ""
+
+#: GladeToBac.bas:89
+msgid "-a run clean-up funktion, confirm deleting"
+msgstr ""
+
+#: GladeToBac.bas:90
+msgid "-A run clean-up funktion, delete without confirmation"
+msgstr ""
+
+#: GladeToBac.bas:91
+msgid "-C GUI block: do not start GUI on error"
+msgstr ""
+
+#: GladeToBac.bas:92
+msgid "-g include GUI-XML-file in code (for final version)"
+msgstr ""
+
+#: GladeToBac.bas:93
+msgid "-G do not include GUI-XML-file in code"
+msgstr ""
+
+#: GladeToBac.bas:94
+msgid "-i I18N support in main file (*.bas)"
+msgstr ""
+
+#: GladeToBac.bas:95
+msgid "-I no I18N support in main file (*.bas)"
+msgstr ""
+
+#: GladeToBac.bas:96
+msgid "-n NoAction: analyse file, confirm .bas code sketching"
+msgstr ""
+
+#: GladeToBac.bas:97
+msgid "-N NoAction: analyse file, no .bas code sketching at all"
+msgstr ""
+
+#: GladeToBac.bas:98
+msgid "-t tobac folder: generate and use it"
+msgstr ""
+
+#: GladeToBac.bas:99
+msgid "-T files in current folder (no use of tobac-folder)"
+msgstr ""
+
+#: GladeToBac.bas:100
+msgid "-x run xgettext to I18N: create .pot file (in current folder)"
+msgstr ""
+
+#: GladeToBac.bas:101
+msgid "Values form .ini-file are used (overwrite by -g-G-i-I-t-T)."
+msgstr ""
+
+#: GladeToBac.bas:102
+msgid "To use aditional functions => start with GUI."
+msgstr ""
+
+#: GladeToBac_CodeBas.bas:21
+msgid "insert code"
+msgstr ""
+
+#: GladeToBac_CodeBas.bas:29 GladeToBac_CodeBas.bas:180
+#: GladeToBac_CodeBas.bas:335
+msgid "File"
+msgstr ""
+
+#: GladeToBac_CodeBas.bas:34 GladeToBac_Xml.bas:278
+msgid "Written"
+msgstr ""
+
+#: GladeToBac_CodeBas.bas:190 GladeToBac_CodeBas.bas:354 GladeToBac_Xml.bas:130
+#: GladeToBac_Xml.bas:238 GladeToBac_Xml.bas:445
+msgid "Read"
+msgstr ""
+
+#: GladeToBac_CodeBas.bas:340
+msgid "Empty file"
+msgstr ""
+
+#: GladeToBac_CodeProj.bas:13
+msgid "License"
+msgstr ""
+
+#: GladeToBac_CodeProj.bas:15
+msgid "Description"
+msgstr ""
+
+#: GladeToBac_CodeProj.bas:74
+msgid "_Run project"
+msgstr ""
+
+#: GladeToBac_CodeProj.bas:77
+msgid "_Compile project"
+msgstr ""
+
+#: GladeToBac_Signals.bas:20
+msgid "definitions found"
+msgstr ""
+
+#: GladeToBac_UI.bas:23
+msgid "Wellcome"
+msgstr ""
+
+#: GladeToBac_UI.bas:23
+msgid "to"
+msgstr ""
+
+#: GladeToBac_UI.bas:53
+msgid "Start GUI"
+msgstr ""
+
+#: GladeToBac_UI.bas:54 GladeToBac_UI.bas:63 GladeToBac_Xml.bas:502
+msgid "_Yes"
+msgstr ""
+
+#: GladeToBac_UI.bas:55 GladeToBac_UI.bas:64 GladeToBac_Xml.bas:503
+msgid "_No"
+msgstr ""
+
+#: GladeToBac_UI.bas:56 GladeToBac_UI.bas:65 GladeToBac_Xml.bas:504
+msgid "_Cancel"
+msgstr ""
+
+#: GladeToBac_UI.bas:62
+msgid "Sketching"
+msgstr ""
+
+#: GladeToBac_UI.bas:66 GladeToBac_Xml.bas:506
+msgid "Yes"
+msgstr ""
+
+#: GladeToBac_UI.bas:67 GladeToBac_Xml.bas:510
+msgid "No"
+msgstr ""
+
+#: GladeToBac_UI.bas:68 GladeToBac_Xml.bas:512
+msgid "Cancel"
+msgstr ""
+
+#: GladeToBac_UI.bas:105
+msgid "no XML file"
+msgstr ""
+
+#: GladeToBac_UI.bas:163
+msgid "Cannot open folder"
+msgstr ""
+
+#: GladeToBac_UI.bas:164 GladeToBac_UI.bas:550
+msgid "Folder"
+msgstr ""
+
+#: GladeToBac_UI.bas:173
+msgid " >> Cannot open file"
+msgstr ""
+
+#: GladeToBac_UI.bas:248 GladeToBac_UI.bas:274
+msgid "licenses found"
+msgstr ""
+
+#: GladeToBac_UI.bas:258
+msgid "User defined"
+msgstr ""
+
+#: GladeToBac_UI.bas:353
+msgid "Unknown file name"
+msgstr ""
+
+#: GladeToBac_UI.bas:439
+msgid "Clean up"
+msgstr ""
+
+#: GladeToBac_UI.bas:440
+msgid "Marking"
+msgstr ""
+
+#: GladeToBac_UI.bas:444 GladeToBac_UI.bas:451
+msgid "there are"
+msgstr ""
+
+#: GladeToBac_UI.bas:445 GladeToBac_UI.bas:452
+msgid "files deprecated"
+msgstr ""
+
+#: GladeToBac_UI.bas:447
+msgid "there is"
+msgstr ""
+
+#: GladeToBac_UI.bas:448
+msgid "file deprecated"
+msgstr ""
+
+#: GladeToBac_UI.bas:453
+msgid "To do"
+msgstr ""
+
+#: GladeToBac_UI.bas:454
+msgid "Delete _All"
+msgstr ""
+
+#: GladeToBac_UI.bas:455
+msgid "Delete _Single"
+msgstr ""
+
+#: GladeToBac_UI.bas:456
+msgid "_No deleting"
+msgstr ""
+
+#: GladeToBac_UI.bas:458
+msgid "Delete all"
+msgstr ""
+
+#: GladeToBac_UI.bas:460
+msgid "Delete single"
+msgstr ""
+
+#: GladeToBac_UI.bas:462
+msgid "No deleting"
+msgstr ""
+
+#: GladeToBac_UI.bas:478
+msgid "Sketching bas files"
+msgstr ""
+
+#: GladeToBac_UI.bas:488 GladeToBac_UI.bas:500 GladeToBac_UI.bas:579
+#: GladeToBac_Xml.bas:478
+msgid "Done"
+msgstr ""
+
+#: GladeToBac_UI.bas:498
+msgid "Error: Can't run"
+msgstr ""
+
+#: GladeToBac_UI.bas:511
+msgid "Generating"
+msgstr ""
+
+#: GladeToBac_UI.bas:511
+msgid "file for I18N"
+msgstr ""
+
+#: GladeToBac_UI.bas:516
+msgid "Error: Can't write to"
+msgstr ""
+
+#: GladeToBac_UI.bas:569
+msgid "Creating project files"
+msgstr ""
+
+#: GladeToBac_Xml.bas:57
+msgid "Load / analyse"
+msgstr ""
+
+#: GladeToBac_Xml.bas:140
+msgid "      TYPE name"
+msgstr ""
+
+#: GladeToBac_Xml.bas:141
+msgid "   GTK-Version"
+msgstr ""
+
+#: GladeToBac_Xml.bas:142
+msgid "     I18N support"
+msgstr ""
+
+#: GladeToBac_Xml.bas:143
+msgid "on"
+msgstr ""
+
+#: GladeToBac_Xml.bas:143
+msgid "off"
+msgstr ""
+
+#: GladeToBac_Xml.bas:178
+msgid "Setting default values"
+msgstr ""
+
+#: GladeToBac_Xml.bas:333
+msgid "    existing: "
+msgstr ""
+
+#: GladeToBac_Xml.bas:335
+msgid "to be writen: "
+msgstr ""
+
+#: GladeToBac_Xml.bas:396
+msgid "New_file"
+msgstr ""
+
+#: GladeToBac_Xml.bas:447
+msgid "RESULTS"
+msgstr ""
+
+#: GladeToBac_Xml.bas:448
+msgid " GTK version"
+msgstr ""
+
+#: GladeToBac_Xml.bas:449
+msgid "nam. Widgets"
+msgstr ""
+
+#: GladeToBac_Xml.bas:450
+msgid "Callbacks   "
+msgstr ""
+
+#: GladeToBac_Xml.bas:453
+msgid "This handler names cannot be used in fbc / gas"
+msgstr ""
+
+#: GladeToBac_Xml.bas:455
+msgid "Rename properly before further operation!"
+msgstr ""
+
+#: GladeToBac_Xml.bas:459
+msgid "    existing"
+msgstr ""
+
+#: GladeToBac_Xml.bas:460
+msgid "staying unchanged"
+msgstr ""
+
+#: GladeToBac_Xml.bas:461
+msgid "         new"
+msgstr ""
+
+#: GladeToBac_Xml.bas:462
+msgid "to be written"
+msgstr ""
+
+#: GladeToBac_Xml.bas:463
+msgid "  deprecated"
+msgstr ""
+
+#: GladeToBac_Xml.bas:464
+msgid "may be cleaned up"
+msgstr ""
+
+#: GladeToBac_Xml.bas:501
+msgid "delete"
+msgstr ""
+
+#: GladeToBac_Xml.bas:507
+msgid "Error: can't kill"
+msgstr ""
+
+#: GladeToBac_Xml.bas:508 GladeToBac_Xml.bas:517
+msgid "Deleted"
+msgstr ""
+
+#: GladeToBac_Xml.bas:516
+msgid "ERROR"
+msgstr ""
+
+#: GladeToBac.ui:15 GladeToBac.ui:16 GladeToBac.ui:226
+msgid "_Quit"
+msgstr ""
+
+#: GladeToBac.ui:17 GladeToBac.ui:231
+msgid "end application"
+msgstr ""
+
+#: GladeToBac.ui:24 GladeToBac.ui:25 GladeToBac.ui:260
+msgid "Generate _FB files"
+msgstr ""
+
+#: GladeToBac.ui:26 GladeToBac.ui:265
+msgid ""
+"write files:\n"
+"-> *_tobac.bas (allways)\n"
+"-> *.bas and callbacks *.bas (if not exists)\n"
+"-> GUI-source *_gui.bas (if required)\n"
+"[active after GUI-XML-file loaded]"
+msgstr ""
+
+#: GladeToBac.ui:37
+msgid "generate _pot file (I18N)"
+msgstr ""
+
+#: GladeToBac.ui:38 GladeToBac.ui:445
+msgid "I18N"
+msgstr ""
+
+#: GladeToBac.ui:39 GladeToBac.ui:290
+msgid ""
+"scan translatable texts in source files and generate a *.pot file for poedit (*.bas in main folder and tobac folder, *.ui/*.glade in main folder)\n"
+"[active after GUI-XML-file loaded]"
+msgstr ""
+
+#: GladeToBac.ui:47 GladeToBac.ui:142
+msgid "_Load / analyse"
+msgstr ""
+
+#: GladeToBac.ui:48
+msgid "_Load"
+msgstr ""
+
+#: GladeToBac.ui:49 GladeToBac.ui:147
+msgid "choose GUI-XML-file (*.ui/*.glade), load and check it for further processing (read-only operations)"
+msgstr ""
+
+#: GladeToBac.ui:130
+msgid "_File   "
+msgstr ""
+
+#: GladeToBac.ui:163
+msgid "Save _project parameters"
+msgstr ""
+
+#: GladeToBac.ui:168
+msgid ""
+"Save parameters:\n"
+"CURPATH/GTK+tobac.ini.\n"
+"[active after GUI-XML-file loaded]"
+msgstr ""
+
+#: GladeToBac.ui:181
+msgid "Save _default parameters"
+msgstr ""
+
+#: GladeToBac.ui:185
+msgid ""
+"Save parameters:\n"
+"EXEPATH/GTK+tobac.ini."
+msgstr ""
+
+#: GladeToBac.ui:203
+msgid "_Clean-up"
+msgstr ""
+
+#: GladeToBac.ui:208
+msgid ""
+"check for deprecated callbacks *.bas and offer to delete them.\n"
+"[active after GUI-XML-file loaded]"
+msgstr ""
+
+#: GladeToBac.ui:248
+msgid "_Execute   "
+msgstr ""
+
+#: GladeToBac.ui:285
+msgid "Generate _pot file (_I18N)"
+msgstr ""
+
+#: GladeToBac.ui:307
+msgid "Generate _project files"
+msgstr ""
+
+#: GladeToBac.ui:312
+msgid ""
+"write required project files (existing files don't get touched)\n"
+"[active after GUI-XML-file loaded]"
+msgstr ""
+
+#: GladeToBac.ui:331
+msgid "_Help   "
+msgstr ""
+
+#: GladeToBac.ui:347
+msgid "show file ReadMe.txt and command line help in output tab"
+msgstr ""
+
+#: GladeToBac.ui:367
+msgid "show info about this application"
+msgstr ""
+
+#: GladeToBac.ui:421
+msgid "Generate .bas"
+msgstr ""
+
+#: GladeToBac.ui:469
+msgid "Quit"
+msgstr ""
+
+#: GladeToBac.ui:518
+msgid "_Synopsis:"
+msgstr ""
+
+#: GladeToBac.ui:533
+msgid ""
+"Short description of Project.\n"
+"(used in *.bas, make, ReadMe.txt, *.geany, *.fbp)\n"
+"A long version will be imported from the file *.desc, if exists.\n"
+"(used in *.bas, ReadMe.txt)"
+msgstr ""
+
+#: GladeToBac.ui:551
+msgid ""
+"Choose license\n"
+"(used in *.bas, make, ReadMe.txt)"
+msgstr ""
+
+#: GladeToBac.ui:567
+msgid "_Version:"
+msgstr ""
+
+#: GladeToBac.ui:582
+msgid "Start version of project. Later, the version will be red from *.bas, if exists."
+msgstr ""
+
+#: GladeToBac.ui:597
+msgid ""
+"Insert webside URL, e.g. 'http://www.meins.net'\n"
+"(used in *.bas, make, ReadMe.txt)"
+msgstr ""
+
+#: GladeToBac.ui:613
+msgid ""
+"Insert Email adress, e.g. 'My.Name@home.net' (! mind spamers !)\n"
+"(used in *.bas, *.po, make, ReadMe.txt)"
+msgstr ""
+
+#: GladeToBac.ui:629
+msgid ""
+"Insert Name\n"
+"(used in *.bas, *.po, make, ReadMe.txt, *.rc)"
+msgstr ""
+
+#: GladeToBac.ui:643
+msgid "_Author:"
+msgstr ""
+
+#: GladeToBac.ui:656
+msgid "_Email:"
+msgstr ""
+
+#: GladeToBac.ui:671
+msgid "_Website:"
+msgstr ""
+
+#: GladeToBac.ui:686
+msgid ""
+"Name of TYPE-definition, used for UI-variables (references to widgets/Objects).\n"
+"When empty:\n"
+"all UI-variables are global."
+msgstr ""
+
+#: GladeToBac.ui:704
+msgid "T_YPE name:"
+msgstr ""
+
+#: GladeToBac.ui:716
+msgid "I18_N support"
+msgstr ""
+
+#: GladeToBac.ui:721
+msgid ""
+"When aktiv:\n"
+"generate code to include and initialise libintl for internationalisation"
+msgstr ""
+
+#: GladeToBac.ui:737
+msgid "_tobac folder"
+msgstr ""
+
+#: GladeToBac.ui:742
+msgid ""
+"When active:\n"
+"generate *_tobac.bas [*_gui.bas] and callbacks *.bas in subfolder tobac."
+msgstr ""
+
+#: GladeToBac.ui:763
+msgid "<b>New project</b>"
+msgstr ""
+
+#: GladeToBac.ui:790
+msgid "GUI _in source"
+msgstr ""
+
+#: GladeToBac.ui:795
+msgid ""
+"When active:\n"
+"generate *_gui.bas and include the file into the source code. In this case the GUI-XML-file needs NOT to be shiped with the binary."
+msgstr ""
+
+#: GladeToBac.ui:821
+msgid ""
+"This GTK+ version gets checked at startup (ie '2.16').\n"
+"Minimum is 2.8.\n"
+"When empty:\n"
+"no version check gets performed."
+msgstr ""
+
+#: GladeToBac.ui:841
+msgid "<b>New project_tobac.bas</b>"
+msgstr ""
+
+#: GladeToBac.ui:879
+msgid ""
+"When active:\n"
+"generate 'readme.txt' in main folder, if not exists"
+msgstr ""
+
+#: GladeToBac.ui:898
+msgid ""
+"When active:\n"
+"generate 'makefile' in main folder, if not exists"
+msgstr ""
+
+#: GladeToBac.ui:917
+msgid ""
+"When active:\n"
+"generate Geany project file '*.geany' in main folder, if not exists"
+msgstr ""
+
+#: GladeToBac.ui:936
+msgid ""
+"When active:\n"
+"generate FB-IDE project file '*.fbide.fbp' in main folder, if not exists"
+msgstr ""
+
+#: GladeToBac.ui:955
+msgid ""
+"When active:\n"
+"generate FB-Edit-Projekt-file '*.fbp' in main folder, if not exists"
+msgstr ""
+
+#: GladeToBac.ui:974
+msgid ""
+"When active:\n"
+"generate Jelly-Projekt-file '*.jfp' in main folder, if not exists"
+msgstr ""
+
+#: GladeToBac.ui:993
+msgid ""
+"When active:\n"
+"generate Windows-Resource-Datei '*.rc' in main folder, if not exists"
+msgstr ""
+
+#: GladeToBac.ui:1014
+msgid ""
+"When active:\n"
+"bind Icon file '*.ico' in Windows Resource file (*.rc)"
+msgstr ""
+
+#: GladeToBac.ui:1034
+msgid "<b>Project files</b>"
+msgstr ""
+
+#: GladeToBac.ui:1054
+msgid "_Parameters"
+msgstr ""
+
+#: GladeToBac.ui:1092
+msgid "_Outputs"
+msgstr ""
+
+#: GladeToBac.ui:1120
+msgid "GPLv3"
+msgstr ""
+
+#: GladeToBac.ui:1121
+msgid "FreeBasic code sketcher"
+msgstr ""
+
+#: GladeToBac.ui:1123
+msgid "FreeBASIC-Portal"
+msgstr ""
+
+#: GladeToBac.ui:1124
+msgid ""
+"This program is free software: you can redistribute it and/or modify it under\n"
+"the terms of the GNU General Public License as published by the Free Software\n"
+"Foundation, either version 3 of the License, or (at your option) any later\n"
+"version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT\n"
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more\n"
+"details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License along with\n"
+"this program.  If not, see <http://www.gnu.org/licenses/>.\n"
+msgstr ""
+
+#: GladeToBac.ui:1141
+msgid "Thomas.Freiherr@gmx.net"
+msgstr ""

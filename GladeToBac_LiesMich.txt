@@ -1,0 +1,598 @@
+' coding utf8
+
+Information zum Programm GladeToBac, Version 3.0
+
+
+Beschreibung:
+
+GladeToBac ist ein GTK TO BAsiC Code Sketcher für FreeBasic. To
+sketch = skizzieren. In diesem Sinne erzeugt GladeToBac FreeBasic
+Quelltext, der vom Programmierer mit individueller Funktionalität
+ausgeschmückt werden kann. Ziel ist es, die rasche Erstellung von
+FreeBasic-Programmen mit grafischer Oberfläche (Grafic User
+Interface = GUI) zu unterstützen. Als Oberfläche wird das Gimp Tool
+Kit (GTK+) verwendet, welches für viele Betriebssysteme (u.a.
+Windows, Unix) verfügbar ist und nach der GPL frei benutzbar ist.
+Zur Gestaltung der GUI-Elemente (Widgets/Objects) wird das Programm
+Glade3 verwendet. GladeToBac sorgt dafür, dass die in den
+Glade3-Dateien definierten Elemente der Oberfläche im
+FreeBasic-Quelltext angesprochen werden können und die zugehörigen
+Signal-Handler korrekt eingebunden werden.
+
+GladeToBac unterstützt also RAD Technologien zum
+Plattform-übergreifenden Programmieren von GUI-Applikationen unter
+Unix/LINUX und win32 mit dem FreeBasic Compiler. (RAD = Rapid
+Application Development = schnelle Applikationsentwicklung)
+
+
+Autor:
+
+Thomas{ dot }Freiherr[ at ]gmx[ dot ]net
+und weitere, siehe unten (oder Datei->Info)
+
+
+Lizenz:
+
+GladeToBac ist freie Software und kann verwendet werden, wie
+geliefert. GladeToBac wird auf unterschiedlichen EDV-Konstellationen
+erfolgreich eingesetzt. Dennoch kann und wird der Autor unter keinen
+Umständen Verantwortung für gewollte oder ungewollte Veränderungen
+am EDV-System des Anwenders übernehmen.
+
+GladeToBac kann verändert und weitergegeben werden, gemäß der GNU
+GENERAL PUBLIC LICENSE V3, Details siehe: http://gplv3.fsf.org/
+
+
+Installation - folgende Software wird benötigt:
+
+Freebasic (> 0.21)
+  (http://www.freebasic.net)
+Glade3
+  (http://sourceforge.net/project/showfiles.php?group_id=98754)
+GTK+ >= 2.16
+  (http://sourceforge.net/project/showfiles.php?group_id=98754)
+Optional: IDE wie z.B. Geany
+  (http://www.geany.org/Download/Releases)
+gettext für I18N
+  (http://www.gnu.org/software/gettext/)
+
+
+Kurzanleitung:
+
+Vorbereitung
+1.) GladeToBacX.Y.Z.zip Archiv entpacken (X.Y.Z steht für die Versionsnummer)
+2.) .bi-Dateien installieren (Ordner aus Archiv '/inc/*' in
+  '*/freebasic/inc' verschieben)
+
+Anwendung
+A) Erstellen eines neuen Programms (nennen wir es einmal ANWENDUNG):
+1.) Ordner ANWENDUNG erstellen (Projektordner).
+2.) Glade3 starten, das GUI gestalten und als ANWENDUNG.ui in den
+    Projektordner speichern.
+3.) GladeToBac starten, in "Einstellungen" Parameter vorgeben
+4.) ANWENDUNG.ui laden, Funktion 'Bearbeiten' aufrufen.
+5.) Nach Schritt 4 befindet sich im Ordner die neu erzeugte
+    ANWENDUNG.bas-Datei. Sie kann unter Verwendung der IDE jetzt mit
+    Quelltext gefüllt werden.
+6.) Ggf. befinden sich nach Schritt 4 weitere x_x_x.bas Dateien im
+    Ordner (oder im Unterordner tobac), die mit Quelltext gefüllt werden.
+7.) Abschließend die Datei ANWENDUNG.bas mit fbc (FreeBasic-Compiler)
+    übersetzen.
+
+B) Optimieren eines vorhandenen Programmes:
+1.) Glade3 starten, das GUI optimieren und als Datei ANWENDUNG.ui
+    speichern.
+2.) GladeToBac starten, die Datei ANWENDUNG.ui laden und die Funktion
+   'Bearbeiten' ausführen. Gegebenenfalls die Funktion 'Ausmisten'
+    ausführen.
+3.) Nur die im Schritt 2 neu erzeugten x_x_x.bas-Dateien mit Quelltext
+    füllen.
+4.) Die Datei ANWENDUNG.bas mit fbc übersetzen.
+
+Die Schritte B2 und B3 sind nicht immer zwingend erforderlich. Sie
+müssen ausgeführt werden:
+* wenn neue Signale (CallBacks) hinzugefügt oder vorhandene umbenannt
+  werden,
+* wenn der Schalter 'GUI in Quelltext integrieren' aktiviert ist,
+* wenn Objekte/Widgets neu hinzukommen oder umbenannt werden.
+Andernfalls können die Schritte B2 und B3 auch ausgelassen werden.
+
+Ein unbeabsichtigtes Ausführen dieser Schritte ist ungefährlich und
+führt nicht zu Mehrarbeit (solange man sich an die Vorgaben in den
+Quelltexten hält und nur die dafür vorgesehenen Stellen mit eigenem
+Quelltext füllt!). Im Zweifel also lieber einmal zu viel als einmal
+zu wenig die Funktion 'bearbeiten' ausführen.
+
+C) Erzeugen einer .pot-Datei (I18N - Internationalisierung)
+1.) GladeToBac starten, die Datei ANWENDUNG.ui laden
+2.) Die Funktion 'Datei->I18N' ausführen (es wird eine neue Datei
+   ANWENDUNG.pot erzeugt).
+
+
+Details:
+
+Glade3 speichert in der aktuellen Version (3.10) die
+Oberflächendatei wahlweise für die Verwendung mit der Glade-LIB
+(libglade2-0, Endung .glade) oder für die Verwendung mit GtkBuilder
+(Endung .ui). GtkBuilder ist die moderne Variante und bietet
+zusätzliche Funktionen. GladeToBac generiert FreeBasic-Quelltext für
+beide Varianten, entsprechend der Endung der GUI-XML-Datei.
+
+Die Funktionen für GtkBuilder sind in den original GTK-Bindings von
+FreeBasic (gtk/gtk.bi) noch nicht enthalten. Um diese nutzen zu
+können, befinden sich im GladeToBac Archiv die Datei
+inc/gtk/GTK-2.22.0_TJF.bi oder /inc/TJF/gtk.bi. Die erste enthält
+alle GTK-Bindings für die "stabile"-Version 2.22.0 von Okt. 2010,
+welche in einer Datei zusammengefaßt sind (, sie enthält also auch
+Bindings für atk-1.32.0, cairo-1.10.0, gdk-2.90.1, glib-2.27.0 und
+pango-1.28.3). Die zweite Datei bindet GTK in der Version 3.0 ein
+und lädt dazu weitere Headerdateien, welche sich im gleichen Ordner
+befinden.
+
+GladeToBac lädt und analysiert eine GUI-XML-Datei (*.ui/*.glade,
+erstellt mit Glade3) und bestimmt so die benutzen Widgets und
+Signal-Handler. Im nächsten Bearbeitungsschritt werden
+FreeBasic-Quelltexte (im selben Ordner und ggf. im Unterordner
+tobac) generiert, welche in kompilierter Form die Benutzeroberfläche
+auf dem Bildschirm darstellen und auf die definierten Signale
+reagieren. Zusätzlich können Übersetzungs-Dateien für die
+Internationalisierung (I18N) erzeugt und auch Projektdateien für
+verschiedene Entwicklungsumgebungen erstellt werden.
+
+Die von GladeToBac erzeugten Quelltextdateien sind kommentiert und
+sollten weitgehend selbsterklärend sein (Dank an Hrn. Siebke!). Wenn
+alles funktioniert, dann werden folgende Dateien erzeugt:
+
+ANWENDUNG.bas (Die Hauptdatei, welche kompiliert wird)
+ANWENDUNG_tobac.bas (ggf. im Ordner tobac)
+ANWENDUNG_gui.bas (optional, ggf. im Ordner tobac)
+x_x_x.bas (ggf. mehrere Dateien, ggf. im Ordner tobac)
+Sowie weitere Projekt-Dateien für verschiedene
+Entwicklungsumgebungen, welche jeweils in den Hauptordner der
+Anwendung geschrieben werden (siehe unten).
+
+Die meisten Dateien werden nur einmalig von GladeToBac erzeugt. Wenn
+sie einmal vorhanden sind, werden sie von GladeToBac nicht
+überschrieben (das Editieren mit einem Texteditor ist natürlich
+möglich und auch sinnvoll). Es gibt jedoch zwei Ausnahmen, nämlich
+die Dateien ANWENDUNG_tobac.bas und ANWENDUNG_gui.bas), siehe unten.
+Wenn eine neue Version einer Datei wird, muss die alte Datei
+umbenannt oder gelöscht werden, damit GladeToBac wieder aktiv wird.
+
+
+Oberfläche (Bedienelemente):
+
+GladeToBac kann sowohl mithilfe der Kommandozeile als auch durch
+eine grafische Oberfläche bedient werden. Im folgenden wird die
+grafische Oberfläche beschrieben. Diese enthält neben der Menüzeile
+und der Werkzeugleiste einen Bereich mit zwei Karteireitern
+(notebook).
+
+Im rechten Karteireiter 'Ausgabe' werden Meldungen von GladeToBac
+ausgegeben. Diese Meldungen protokollieren die Aktionen, welche
+GladeToBac ausführt und ggf. Fehler, welche dabei auftreten.
+
+Im linken Karteireiter 'Einstellungen' wird festgelegt, welche
+Aktionen GladeToBac beim Aufruf der Funktionen 'Bearbeiten' bzw.
+'Projektdateien erstellen' ausführen soll.
+
+Die Einstellungen im Bereich 'Neues Projekt' werden angewendet, wenn
+eine neue Hauptdatei 'ANWENDUNG.bas' erzeugt wird. Besteht diese
+Datei bereits, so verwendet GladeToBac dieselben Einstellungen wie
+bei der Erzeugung dieser Hauptdatei.
+
+Die im rechten Bereich unter 'Projekt-Dateien' ausgewählten Dateien
+werden im Projektordner erzeugt, also in dem Ordner, aus dem die
+GUI-XML-Datei gelesen wurde. Wenn eine ausgewählte Datei bereits
+vorhanden ist, verändert GladeToBac diese nicht.
+
+Die im Bereich FreeBasic-Dateien getroffenen Einstellungen werden
+bei jedem Aufruf der Funktion 'Bearbeiten' wirksam. Einerseits wird
+hier festgelegt, ob die GUI-XML-Datei in den FreeBasic-Quelltext
+integriert werden soll, also die Datei 'ANWENDUNG_gui.bas' erzeugt
+und eingebunden wird. Dadurch wird das Kompilat ohne die
+GUI-XML-Datei lauffähig. Andererseits kann durch Auswahl von 'tobac
+Ordner' festgelegt werden, dass Quelltexte nicht im Hauptordner,
+sondern in einem Unterordner namen 'tobac' erzeugt werden, was bei
+großen Projekten die Anzahl der Dateien im Hauptordner reduziert. In
+den 'tobac' -Ordner werden die Callbacks 'x_x_x.bas' und die Dateien
+'ANWENDUNG_tobac.bas' und 'ANWENDUNG_gui.bas' ausgelagert.
+
+
+Beschreibung der verwendeten Dateien:
+
+data/*.lic:
+
+Der Ordner 'data' enthält mehrere Dateien mit der Endung '.lic'.
+Diese enthalten den Text von Lizenzen, wobei die erste Zeile für den
+Linzenznamen reserviert ist. Dieser wird beim Start von GladeToBac
+eingelesen und in dem Auswahlfeld unter 'Neues Projekt' zur Auswahl
+angeboten. Der zu verwendende Lizenztext beginnt erst in der zweiten
+Zeile. Er wird in die Dateien 'ANWENDUNG.bas', 'readme.txt' und
+'make' übernommen. Die Zeilenlänge sollte <=65 Zeichen sein. Es
+können weitere Lizenztexte ergänzt werden.
+
+data/Signals.def
+
+In dieser Datei (lesbares Textformat) sind die Definitionen der
+Signal-Handler enthalten. Die Funktionen zur Behandlung von Signalen
+(Callbacks) haben unterschiedliche Parameter und sind teilweise als
+Prozedur (SUB) oder als Funktion mit Rückgabewert definiert. Auch
+bestehen Unterschiede in der Callback-Definition zwischen den
+Hauptversionen von GTK. Die Datei Signals3.def enthält die Callbacks
+für GTK Versionen 3 und darüber, die Datei Signals.def enthält die
+Definitionen für vorhergehende Versionen. Das Zusammenfügen beider
+Dateien ist keinesfalls ratsam. GladeToBac entscheidet anhand der
+Angaben in der GUI-XML-Datei bzw. der Einstellung unter Parameter,
+welche Definitionsdatei verwendet werden soll. Sollten in
+zukünftigen GTK-Versionen neue Signale hinzukommen, so können diese
+leicht in diesen Dateien ergänzt werden: dazu wird der Originaltext
+aus der GTK-Dokumentation in die entsprechende Datei eingefügt.
+
+ANWENDUNG.desc (optional):
+
+Diese Datei enthält eine ausführliche Beschreibung des Projektes.
+Wenn sie im Hauptordner vorhanden ist, wird ihr Inhalt in den
+Quelltext der Hauptdatei 'ANWENDUNG.bas' und in die Datei
+'readme.txt' übernommen. Die Zeilenlänge sollte <=65 Zeichen sein.
+
+ANWENDUNG.ui (ggf. ANWENDUNG.glade):
+
+GUI-XML-Datei mit Beschreibung der Öberfläche, erzeugt mit dem
+Programm 'Glade3'. Diese Datei ist Grundlage für allen Anwendungen
+von GladeToBac.
+
+ANWENDUNG.bas:
+
+Diese Datei wird von GladeToBac beim ersten Lauf neu erzeugt und
+enthält den Quelltext der Hauptdatei, welche anschließend kompiliert
+wird. Sie fügt die einzelnen Quelltextdateien in der vorgesehenen
+Reihenfolge aneinander, initialisiert und startet das GUI, wartet
+auf die Reaktionen des Benutzers und sorgt für ordnungsgemäße
+Programmbeendung.
+
+In dieser Dateien kann und soll sich der Programmierer frei
+entfalten, ohne dabei die gekennzeichneten Blöcke von GladeToBac zu
+verändern.
+
+x_x_x.bas:
+
+Mit den Dateien x_x_x.bas erfolgt die Anbindung an die Callbacks
+(Events / Ereignisse) des GUI. In diesen Dateien wird definiert,
+welche Reaktionen auf die Aktionen des Anwenders am GUI erfolgen
+sollen. Die Dateien befinden sich je nach Einstellung entweder im
+Hauptordner oder im Unterordner tobac.
+
+Den Namen vergibt GladeToBac entsprechend der Benennung des Signales
+in Glade3. Wird dort z.B. für einen Button das Siganl
+'on_button_clicked' definiert, so erzeugt GladeToBac die Datei 'on
+button_clicked.bas', in welcher die SUB zur Behandlung dieses
+Signales enthalten ist. Für jedes definierte Signal (überwachte
+Ereignis, CallBack) erzeugt GladeToBac eine x_x_x.bas-Datei.
+
+Diese Dateien können und sollen also mit eigenem Quelltext gefüllt
+werden. Bereits vorhandene Dateien werden weder überschrieben noch
+gelöscht.
+
+Wird eine Ereignisüberwachung in der GUI-XML-Datei (im Programm
+Glade3) gelöscht, so wird die entsprechende Datei x_x_x.bas nicht
+mehr benötigt und auch nicht mehr in das Programm inkludiert. Sie
+ist veraltet. Die Funktion 'Ausmisten' dient dazu, diese veralteten
+Dateien zu identifizieren und ggf. zu löschen.
+
+Wenn eine editierbare Datei nicht wie vorgesehen mit Quelltext
+gefüllt worden ist, dann wird eine Fehlermeldung vom fbc-Kompiler
+ausgegeben.
+
+Projekt-Dateien:
+
+Diese Dateien dienen zur Voreinstellung von verschiedenen
+Entwicklungsumgebungen. Eine ausführliche Beschreibung sprengt den
+Rahmen dieses Textes. (ReadMe.txt, makefile, *.Geany, *.fbp, *.jfp,
+*.rc)
+
+
+Die weiteren Dateien dienen internen Zwecken von GladeToBac und
+sollten nicht verändert werden. Sie werden ohne Vorwarnung bei jedem
+Aufruf der Funktion 'Bearbeiten' überschrieben:
+
+ANWENDUNG_tobac.bas:
+
+Diese Datei enthält die GUI Anbindung. Der Sourcecode lädt die
+GUI-Datei (*.ui/*.glade) und referenziert sie. Es werden globale
+Basic-Variablen definiert, die zum Zugriff auf einzelne
+Objects/Widgets dienen und es werden die benötigten Callback-Dateien
+eingebunden.
+
+Die Referenzierung von Objects/Widgets erfolgt dann, wenn deren Name
+bei der Bearbeitung der GUI-Datei veränsert wurde, also nicht mehr
+der Vorgabe von Glade3 entspricht. Details siehe Quelltext.
+
+ANWENDUNG_gui.bas (optional):
+
+Der Schalter 'GUI in Quelltext' bewirkt, dass die GUI-Datei
+(*.ui/*.glade) in den Quelltext eingebunden wird. Dazu erzeugt
+GladeToBac eine weitere Datei namens ANWENDUNG_gui.bas, in der die
+GUI-Datei als String definiert wird. Außerdem enthält in diesem Fall
+ANWENDUNG_tobac.bas einen entsprechend abgewandelten Quelltext,
+durch den diese Datei eingebunden wird. Die Einbindung der GUI-Datei
+hat den Vorteil, dass nur die ausführbare Programm-Datei installiert
+werden muss. Auch ist die eingebundene Datei kleiner als die
+Originaldatei (führende Leerzeichen sind eliminiert). Jedoch wird
+bei jedem Lauf des FreeBasic Compilers die Datei mit übersetzt, was
+bei großen .glade-XML-Dateien zu Zeitverlust führt - daher die
+Wahlmöglichkeit. Beim Testen kleiner Änderungen am GUI ist es sicher
+sinnvoll, die GUI-Datei zur Laufzeit von der Harddisk zu laden und
+nicht bei jedem Durchlauf GladeToBac und fbc anwenden zu müssen.
+
+ANWENDUNG.pot (optional für I18N):
+
+Diese Datei wird durch Aufruf von 'Datei->I18N'  erzeugt('xgettext'
+muss installiert sein). Sie enthält alle übersetzbaren Texte, die
+aus den Quelltexten (*.bas) in den Ordnern
+
+  */ANWENDUNG/tobac (falls angewählt)
+  */ANWENDUNG/
+
+und aus den GUI-XML-Dateien (*.ui oder *.glade) im Ordner
+
+  */ANWENDUNG/
+
+gesammelt werden. Die .pot-Datei wird mit poedit (ein 'gettext'
+Werkzeug) weiter verarbeitet (Einzelschritte siehe unten: I18N). Aus
+dieser Datei entsteht später eine Binär-Datei aus der zur Laufzeit
+des Programmes die übersetzten Texte gelesen werden (für Deutsch
+z.B. /ANWENDUNG/locale/de/LC_MESSAGES/ANWENDUNG.mo). Für jede
+unterstützte Sprache wird also ein Unterordner in 'locale' erzeugt.
+Die anzuwendende Sprache ermittelt GTK+ beim Programmstart aus der
+Umgebungsvariablen 'LANG'.
+
+
+Verwendung im Textmodus (Konsole):
+
+GladeToBac kann sowohl als Programm mit GUI als auch von der Konsole
+ohne GUI gestartet werden. Bei Aufruf als Konsolenprogramm läuft
+GladeToBac bei sinnvoller Parameterangabe automatisch, z.B. im
+Hintergrund. Die Parameterliste erhält man durch Aufruf mit '-h'.
+Tritt bei der automatischen Bearbeitung ein Fehler auf, dann startet
+das GUI und die gewünschte Aktion kann manuell nachgeholt werden.
+
+Beispiele:
+
+./GladeToBac -h
+Zeigt Hilfetext im Textmodus.
+
+./GladeToBac test/HalloWelt.glade
+Lädt, analysiert und bearbeitet die Datei HalloWelt.glade im Textmodus.
+
+./GladeToBac test/HalloWelt.ui -N -a
+Lädt und analysiert die Datei HalloWelt.ui und löscht bei
+Bestätigung veraltete Dateien im Textmodus (*.bas-Dateien werden
+nicht erzeugt).
+
+./GladeToBac test/HalloWelt.ui -N -p
+Lädt und analysiert die Datei HalloWelt.ui und erzeugt eine .pot
+Datei für I18N (*.bas-Dateien werden nicht erzeugt/aktualisiert).
+
+Nur für WIN32: Um diese Funktion unter Windows anwenden zu können,
+muß fbc mit der Option "-s console" (=Default) aufgerufen werden,
+damit die Kommandozeile übergeben wird und ausgewertet werden kann.
+
+
+Weitere HowTos:
+
+D) Starten eines neuen Projektes mit Beschreibungstext aus Datei:
+1.) Schritte A1 und A2 ausführen
+2.) Textdatei ANWENDUNG.desc im Hauptordner erzeugen
+3.) Schritte A3 und folgende ausführen
+
+E) Umstellen eines vorhanden Projektes auf aktuelle GladeToBac-Version:
+1.) Umbenennen des alten Projektordners (z.B. Old_*)
+2.) Neuen Projektordner erstellen
+3.) GUI-Datei in Ordner kopieren
+4.) Schritte A3 bis A7 ausführen (siehe oben)
+5.) Quelltexte aus den Dateien des alten Projektordner in die neuen
+  *.bas-Dateien kopieren
+6.) Kompilieren
+
+F) Projekt umstellen von libglade auf GtkBuilder (.glade nach .ui):
+1.) Datei ANWENDUNG.bas umbenennen (z.B. ANWENDUNG.bas~)
+2.) Glade3.6.7: *.glade-Datei laden und als *.ui speichern
+3.) GladeToBac: Parameter einstellen, Datei ANWENDUNG.ui laden und bearbeiten
+4.) Quelltext aus alter ANWENDUNG.bas~ in neue ANWENDUNG.bas kopieren
+5.) Referenzen in allen Quelltext-Dateien von GtkWidget auf GObject umstellen
+6.) Kompilieren
+
+G) Umstellen eines Projektes von globalen Variablen auf TYPE:
+1.) Datei ANWENDUNG.bas umbenennen (z.B. ANWENDUNG.bas~)
+2.) GladeToBac: TYPE-Name definieren (z.B. _TOBAC_)
+3.) GladeToBac: einstellen, Datei ANWENDUNG.ui laden und bearbeiten
+4.) Quelltext aus alter ANWENDUNG.bas~ in neue ANWENDUNG.bas kopieren
+5.) Referenzen im Quelltext von NAME auf _TOBAC_.NAME umstellen
+6.) Kompilieren
+
+T) Umstellen auf die Verwendung des 'tobac'-Ordner:
+1.) GladeToBac: 'tobac Ordner' auswählen
+2.) GladeToBac: Datei ANWENDUNG.ui (ggf. *.glade) laden und bearbeiten
+3.) Callbacks aus Hauptordner in 'tobac'-Ordner verschieben (überschreiben)
+4.) ANWENDUNG_tobac.bas (und ggf. ANWENDUNG_gui.bas) im Hauptordner löschen
+5.) Kompilieren
+
+U) Umstellen auf die Verwendung von älteren GTK-Versionen:
+1.) Datei ANWENDUNG.bas umbenennen (z.B. ANWENDUNG.bas~)
+2.) GladeToBac: Datei ANWENDUNG.ui (ggf. *.glade) laden und bearbeiten
+3.) GladeToBac: GTK ältere Version einstellen (Parameter)
+4.) Quelltext aus alter ANWENDUNG.bas~ in neue ANWENDUNG.bas kopieren
+5.) Kompilieren
+Anm.: Ggf. erfordert die *.ui-Datei eine GTK-Version > 2.16 (siehe
+Meldung beim Start des Kompilates aus der Konsole).
+
+X) I18N für neues Projekt (ANWENDUNG in verschiedene Sprachen übersetzen):
+1.) Schritte A 1-7 ausführen, dabei beachten:
+    A2) Glade3: Texte als 'Übersetzbar' markieren (ist Standardvorgabe)
+    A3) GladeToBac: Parameter->I18N auswählen
+    A5) übersetzbare Texte in ANWENDUNG.bas mit der Funktion gettext
+        (Kürzel '__') erzeugen. (Beispiel: aus '?"Test"' wird '?*__("Test")')
+    A6) Ggf. weitere Texte in x_x_x.bas Dateien auf __("") umstellen.
+2.) GladeToBac: Datei ANWENDUNG.ui laden und 'Datei->I18N' ausführen
+3.) Neue Ordner erstellen */ANWENDUNG/locale/de/LC_MESSAGES
+4.) Neue Datei ANWENDUNG.pot (aus Schritt 2) in Ordner (aus Schritt 3)
+    kopieren und umbenennen in ANWENDUNG.po
+5.) poedit: */ANWENDUNG/locale/de/LC_MESSAGES/ANWENDUNG.po laden, übersetzen
+    und speichern (es wird eine Datei ANWENDUNG.mo erzeugt)
+6.) Ergebnis ausprobieren (für Originalversion LANG=C)
+    win: SET LANG=de_DE.UTF-8 & ANWENDUNG.exe
+    LINUX: LANG=de_DE.UTF-8 ./ANWENDUNG
+
+Y) Vorhandenes Projekt auf I18N umstellen:
+1.) Ersten GladeToBac Code-Block in ANWENDUNG.bas ergänzen (und abspeichern):
+  ' ---------------------------------------------------------------------
+  '<  GladeToBac:            general init / Allgemeine Initialisierungen >
+      #DEFINE __TJF_GTK_OLD__ '     for old versions / alte GTK+ Version >
+      #INCLUDE "gtk/GTK-2.22.0_TJF.bi" '   GTK+library / GTK+ Bibliothek >
+      gtk_init(@__FB_ARGC__, @__FB_ARGV__) '     start GKT / GTK starten >
+      #INCLUDE "gtk/glib/INTL-0.18_TJF.bi" '        load lib / Lib laden >
+      bindtextdomain(PROG_NAME, EXEPATH & "/locale") '       path / Pfad >
+      bind_textdomain_codeset(PROG_NAME, "UTF-8") 'ncoding / Zeichensatz >
+      textdomain(PROG_NAME) '                       Filename / Dateiname >
+  '<  GladeToBac:                                  end block / Blockende >
+  ' vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+2.) Glade3: Texte als 'Übersetzbar' markieren (ist Standadrvorgabe)
+3.) übersetzbare Texte in ANWENDUNG.bas mit der Funktion gettext (Kürzel
+  '__') erzeugen. (Beispiel: aus '?"Test"' wird '?*__("Test")')
+4.) Ggf. weitere Texte in x_x_x.bas Dateien auf __("") umstellen.
+5.) Fortfahren mit Z 1-5
+
+Z) I18N-Texte aktualisieren (in vorhandenem Projekt):
+1.) GladeToBac: Datei ANWENDUNG.ui laden und 'Datei->I18N' ausführen
+2.) poedit: */ANWENDUNG/locale/de/LC_MESSAGES/ANWENDUNG.po laden
+3.) poedit: 'Katalog->Aus pot Datei aktualisieren' ausführen und Datei
+    '*/ANWENDUNG/ANWENDUNG.pot' auswählen (Infofenster bestätigen)
+4.) neue Texte übersetzen und speichern (neue ANWENDUNG.mo wird erzeugt)
+5.) Ergebnis ausprobieren
+    win: SET LANG=de_DE.UTF-8 & ANWENDUNG.exe
+    LINUX: LANG=de_DE.UTF-8 ./ANWENDUNG
+
+
+Abschließend sei noch bemerkt, dass GladeToBac zur Erzeugung von
+GladeToBac eingesetzt wurde, wie unschwer aus dem Quelltext
+ersichtlich ist.
+
+Die Quelltexte im Ordner 'src' dieses Archivs können also als
+Beispiel für die Anwendung von GladeToBac verwendet werden.
+
+Viel Erfolg bei den eigenen Projekten!
+
+PS:
+Spenden sind willkommen (IBAN: AT16 1937 0310 1013 4371; BIC: DRESATWX)
+
+
+Dieses Projekt wurde inspiriert durch:
+
+'******************************************************************************
+'*  Program name: glade2bas
+'*
+'*  Version:      1.0
+'*
+'*  Author:       Copyright (c) 2007 Klaus Siebke
+'*                Siebke Unternehmensberatung
+'*                URL http://www.siebke.com
+'*
+'*  Description:
+'*  -----------
+'*
+'*  This program generates FreeBasic coding from a glade xml file.
+'*  With this utility it is very easy to create your own GUI application.
+'*  A Basic shell program is created and you only have to add the
+'*  processing logic.
+'*
+'*  Used components:
+'*  ---------------
+'*
+'*  FreeBasic
+'*  Gtk
+'*  glade (for graphical GUI design)
+'*
+'*  As program editor I recommend geany 0.12 or higher with FreeBasic
+'*  syntax highlighting and compile/run "out of the box"
+'*
+'*
+'*  License:
+'*  -------
+'*
+'*  Program provided under GNU GENERAL PUBLIC LICENSE. Pls. refer to:
+'*  http://gplv3.fsf.org/
+'*
+'*  Short summary:
+'*  Permission to use, copy, modify, distribute and sell this software
+'*  and its documentation for any purpose is hereby granted without fee,
+'*  provided that the above copyright notice appear in all copies and
+'*  that both that copyright notice and this permission notice appear
+'*  in supporting documentation.
+'*  It is provided "as is" without express or implied warranty.
+'*
+'******************************************************************************
+'*  Programmname: glade2bas
+'*
+'*  Version:      1.0
+'*
+'*  Autor:        Copyright (c) 2007 Klaus Siebke
+'*                Siebke Unternehmensberatung
+'*                URL http://www.siebke.com
+'*
+'*  Beschreibung:
+'*  ------------
+'*
+'*  Dieses Programm erzeugt FreeBasic Programmcode aus einer glade xml Datei.
+'*  Damit wird es zum Kinderspiel eigene GUI-Anwendungen zu erstellen.
+'*  Sie muessen nur noch die gewuenschte Ablauflogik im generierten Programm-
+'*  rahmen ergaenzen.
+'*
+'*  Verwendete Komponenten:
+'*  ----------------------
+'*
+'*  FreeBasis
+'*  Gtk
+'*  glade (fuer den grafischen GUI-Entwurf/Erstellung der xml-Datei)
+'*
+'*  Als Editor empfehle ich geany 0.12 oder ein hoeheres Release mit FreeBasic
+'*  Syntax-Hervorhebung und Kompilieren/Ausfuehren direkt aus dem Editor
+'*
+'*  Lizenz:
+'*  ------
+'*
+'*  Das Programm steht unter der GNU GENERAL PUBLIC LICENSE. Vgl. hierzu:
+'*  http://gplv3.fsf.org/
+'*
+'*  Kurze Zusammenfassung:
+'*  Sie erhalten die Erlaubnis, dieses Programm und die zugehoerigeDokumentation
+'*  fuer beliebige Zwecke kostenlos zu benutzen, zu kopieren, zu veraendern,
+'*  weiterzugeben oder zu verkaufen, unter der Voraussetzung, dass Sie diese
+'*  Lizenzbestimmung und diesen Text auch in Ihre daraus erstellten Programme bzw.
+'*  Dokumentationen uebernehmen.
+'*  Dieses Werk wird Ihnen so ueberlassen "wie es ist", auf eigene Gefahr und ohne
+'*  jegliche Gewaehrleistung.
+'*
+'******************************************************************************
+
+und
+
+/'
+ ' Glade to FreeBASIC Generator - Generate FreeBASIC sources from Glade Files
+ ' Copyright (C) 2009 Arnel A. Borja
+ ' E-mail: galeon@ymail.com
+ ' Website: http://www.galeon.exofire.net
+ '
+ ' Glade to FreeBASIC Generator is free software: you can redistribute it and/or
+ ' modify it under the terms of the GNU General Public License as published by
+ ' the Free Software Foundation, either version 3 of the License, or (at your
+ ' option) any later version.
+ '
+ ' Glade to FreeBASIC Generator is distributed in the hope that it will be
+ ' useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ ' MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General
+ ' Public License for more details.
+ '
+ ' You should have received a copy of the GNU General Public License along with
+ ' Glade to FreeBASIC Generator.  If not, see <http://www.gnu.org/licenses/>.
+ '/

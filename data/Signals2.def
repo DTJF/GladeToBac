@@ -1,0 +1,2481 @@
+GObject:
+
+The "destroy" signal
+
+void user_function (GtkObject *object, gpointer user_data) : Cleanup / No Recursion / No Hooks
+
+
+The "accel_activate" signal
+
+gboolean user_function (GtkAccelGroup *accel_group,
+ GObject *acceleratable,
+ guint keyval,
+ GdkModifierType modifier,
+ gpointer user_data) : Has Details
+
+The "accel_changed" signal
+
+void user_function (GtkAccelGroup *accel_group,
+ guint keyval,
+ GdkModifierType modifier,
+ GClosure *accel_closure,
+ gpointer user_data) : Run First / Has Details
+
+The "changed" signal
+
+void user_function (GtkAccelMap *object,
+ gchar *accel_path,
+ guint accel_key,
+ GdkModifierType accel_mods,
+ gpointer user_data) : Run Last / Has Details
+
+The "activate" signal
+
+void user_function (GtkAction *action,
+ gpointer user_data) : Run First / No Recursion
+
+The "connect_proxy" signal
+
+void user_function (GtkActionGroup *action_group,
+ GtkAction *action,
+ GtkWidget *proxy,
+ gpointer user_data)
+
+The "disconnect_proxy" signal
+
+void user_function (GtkActionGroup *action_group,
+ GtkAction *action,
+ GtkWidget *proxy,
+ gpointer user_data)
+
+The "post_activate" signal
+
+void user_function (GtkActionGroup *action_group,
+ GtkAction *action,
+ gpointer user_data)
+
+The "pre_activate" signal
+
+void user_function (GtkActionGroup *action_group,
+ GtkAction *action,
+ gpointer user_data)
+
+The "changed" signal
+
+void user_function (GtkAdjustment *adjustment,
+ gpointer user_data) : Run First / No Recursion
+
+The "value_changed" signal
+
+void user_function (GtkAdjustment *adjustment,
+ gpointer user_data) : Run First / No Recursion
+
+The "apply" signal
+
+void user_function (GtkAssistant *assistant,
+ gpointer user_data) : Run Last
+
+The "cancel" signal
+
+void user_function (GtkAssistant *assistant,
+ gpointer user_data) : Run Last
+
+The "close" signal
+
+void user_function (GtkAssistant *assistant,
+ gpointer user_data) : Run Last
+
+The "prepare" signal
+
+void user_function (GtkAssistant *assistant,
+ GtkWidget *page,
+ gpointer user_data) : Run Last
+
+The "activate" signal
+
+void user_function (GtkButton *widget,
+ gpointer user_data) : Run First / Action
+
+The "clicked" signal
+
+void user_function (GtkButton *button,
+ gpointer user_data) : Run First / Action
+
+The "enter" signal
+
+void user_function (GtkButton *button,
+ gpointer user_data) : Run First
+
+The "leave" signal
+
+void user_function (GtkButton *button,
+ gpointer user_data) : Run First
+
+The "pressed" signal
+
+void user_function (GtkButton *button,
+ gpointer user_data) : Run First
+
+The "released" signal
+
+void user_function (GtkButton *button,
+ gpointer user_data) : Run First
+
+The "day_selected" signal
+
+void user_function (GtkCalendar *calendar,
+ gpointer user_data) : Run First
+
+The "day_selected_double_click" signal
+
+void user_function (GtkCalendar *calendar,
+ gpointer user_data) : Run First
+
+The "month_changed" signal
+
+void user_function (GtkCalendar *calendar,
+ gpointer user_data) : Run First
+
+The "next_month" signal
+
+void user_function (GtkCalendar *calendar,
+ gpointer user_data) : Run First
+
+The "next_year" signal
+
+void user_function (GtkCalendar *calendar,
+ gpointer user_data) : Run First
+
+The "prev_month" signal
+
+void user_function (GtkCalendar *calendar,
+ gpointer user_data) : Run First
+
+The "prev_year" signal
+
+void user_function (GtkCalendar *calendar,
+ gpointer user_data) : Run First
+
+The "editing_done" signal
+
+void user_function (GtkCellEditable *cell_editable,
+ gpointer user_data) : Run Last
+
+The "remove_widget" signal
+
+void user_function (GtkCellEditable *cell_editable,
+ gpointer user_data) : Run Last
+
+The "editing_canceled" signal
+
+void user_function (GtkCellRenderer *renderer,
+ gpointer user_data) : Run First
+
+The "editing_started" signal
+
+void user_function (GtkCellRenderer *renderer,
+ GtkCellEditable *editable,
+ gchar *path,
+ gpointer user_data) : Run First
+
+The "accel_cleared" signal
+
+void user_function (GtkCellRendererAccel *accel,
+ gchar *path_string,
+ gpointer user_data) : Run Last
+
+The "accel_edited" signal
+
+void user_function (GtkCellRendererAccel *accel,
+ gchar *path_string,
+ guint accel_key,
+ GdkModifierType accel_mods,
+ guint hardware_keycode,
+ gpointer user_data) : Run Last
+
+The "changed" signal
+
+void user_function (GtkCellRendererCombo *combo,
+ gchar *path_string,
+ GtkTreeIter *new_iter,
+ gpointer user_data) : Run Last
+
+The "edited" signal
+
+void user_function (GtkCellRendererText *renderer,
+ gchar *path,
+ gchar *new_text,
+ gpointer user_data) : Run Last
+
+The "toggled" signal
+
+void user_function (GtkCellRendererToggle *cell_renderer,
+ gchar *path,
+ gpointer user_data) : Run Last
+
+The "toggled" signal
+
+void user_function (GtkCheckMenuItem *checkmenuitem,
+ gpointer user_data) : Run First
+
+The "owner_change" signal
+
+void user_function (GtkClipboard *clipboard,
+ GdkEvent *event,
+ gpointer user_data) : Run First
+
+The "abort_column_resize" signal
+
+void user_function (GtkCList *clist,
+ gpointer user_data) : Run Last / Action
+
+The "click_column" signal
+
+void user_function (GtkCList *clist,
+ gint column,
+ gpointer user_data) : Run First
+
+The "end_selection" signal
+
+void user_function (GtkCList *clist,
+ gpointer user_data) : Run Last / Action
+
+The "extend_selection" signal
+
+void user_function (GtkCList *clist,
+ GtkScrollType scroll_type,
+ gfloat position,
+ gboolean auto_start_selection,
+ gpointer user_data) : Run Last / Action
+
+The "resize_column" signal
+
+void user_function (GtkCList *clist,
+ gint column,
+ gint width,
+ gpointer user_data) : Run Last
+
+The "row_move" signal
+
+void user_function (GtkCList *clist,
+ gint arg1,
+ gint arg2,
+ gpointer user_data) : Run Last
+
+The "scroll_horizontal" signal
+
+void user_function (GtkCList *clist,
+ GtkScrollType scroll_type,
+ gfloat position,
+ gpointer user_data) : Run Last / Action
+
+The "scroll_vertical" signal
+
+void user_function (GtkCList *clist,
+ GtkScrollType scroll_type,
+ gfloat position,
+ gpointer user_data) : Run Last / Action
+
+The "select_all" signal
+
+void user_function (GtkCList *clist,
+ gpointer user_data) : Run Last / Action
+
+The "select_row" signal
+
+void user_function (GtkCList *clist,
+ gint row,
+ gint column,
+ GdkEventButton *event,
+ gpointer user_data) : Run First
+
+The "set_scroll_adjustments" signal
+
+void user_function (GtkCList *clist,
+ GtkAdjustment *arg1,
+ GtkAdjustment *arg2,
+ gpointer user_data) : Run Last
+
+The "start_selection" signal
+
+void user_function (GtkCList *clist,
+ gpointer user_data) : Run Last / Action
+
+The "toggle_add_mode" signal
+
+void user_function (GtkCList *clist,
+ gpointer user_data) : Run Last / Action
+
+The "toggle_focus_row" signal
+
+void user_function (GtkCList *clist,
+ gpointer user_data) : Run Last / Action
+
+The "undo_selection" signal
+
+void user_function (GtkCList *clist,
+ gpointer user_data) : Run Last / Action
+
+The "unselect_all" signal
+
+void user_function (GtkCList *clist,
+ gpointer user_data) : Run Last / Action
+
+The "unselect_row" signal
+
+void user_function (GtkCList *clist,
+ gint row,
+ gint column,
+ GdkEventButton *event,
+ gpointer user_data) : Run First
+
+The "color_set" signal
+
+void user_function (GtkColorButton *widget,
+ gpointer user_data) : Run First
+
+The "color_changed" signal
+
+void user_function (GtkColorSelection *colorselection,
+ gpointer user_data) : Run First
+
+The "changed" signal
+
+void user_function (GtkComboBox *widget,
+ gpointer user_data) : Run Last
+
+The "move_active" signal
+
+void user_function (GtkComboBox *widget,
+ GtkScrollType scroll_type,
+ gpointer user_data) : Run Last / Action
+
+The "popdown" signal
+
+gboolean user_function (GtkComboBox *button,
+ gpointer user_data) : Run Last / Action
+
+The "popup" signal
+
+void user_function (GtkComboBox *widget,
+ gpointer user_data) : Run Last / Action
+
+The "add" signal
+
+void user_function (GtkContainer *container,
+ GtkWidget *widget,
+ gpointer user_data) : Run First
+
+The "check_resize" signal
+
+void user_function (GtkContainer *container,
+ gpointer user_data) : Run Last
+
+The "remove" signal
+
+void user_function (GtkContainer *container,
+ GtkWidget *widget,
+ gpointer user_data) : Run First
+
+The "set_focus_child" signal
+
+void user_function (GtkContainer *container,
+ GtkWidget *widget,
+ gpointer user_data) : Run First
+
+The "change_focus_row_expansion" signal
+
+void user_function (GtkCTree *ctree,
+ GtkCTreeExpansionType expansion,
+ gpointer user_data) : Run Last / Action
+
+The "tree_collapse" signal
+
+void user_function (GtkCTree *ctree,
+ GtkCTreeNode *node,
+ gpointer user_data) : Run Last
+
+The "tree_expand" signal
+
+void user_function (GtkCTree *ctree,
+ GtkCTreeNode *node,
+ gpointer user_data) : Run Last
+
+The "tree_move" signal
+
+void user_function (GtkCTree *ctree,
+ GtkCTreeNode *node,
+ GtkCTreeNode *new_parent,
+ GtkCTreeNode *new_sibling,
+ gpointer user_data) : Run Last
+
+The "tree_select_row" signal
+
+void user_function (GtkCTree *ctree,
+ GtkCTreeNode *node,
+ gint column,
+ gpointer user_data) : Run First
+
+The "tree_unselect_row" signal
+
+void user_function (GtkCTree *ctree,
+ GtkCTreeNode *node,
+ gint column,
+ gpointer user_data) : Run First
+
+The "curve_type_changed" signal
+
+void user_function (GtkCurve *curve,
+ gpointer user_data) : Run First
+
+The "close" signal
+
+void user_function (GtkDialog *arg0,
+ gpointer user_data) : Run Last / Action
+
+The "response" signal
+
+void user_function (GtkDialog *dialog,
+ gint response_id,
+ gpointer user_data) : Run Last
+
+The "changed" signal
+
+void user_function (GtkEditable *editable,
+ gpointer user_data) : Run Last
+
+The "delete_text" signal
+
+void user_function (GtkEditable *editable,
+ gint start_pos,
+ gint end_pos,
+ gpointer user_data) : Run Last
+
+The "insert_text" signal
+
+void user_function (GtkEditable *editable,
+ gchar *new_text,
+ gint new_text_length,
+ gint *position,
+ gpointer user_data) : Run Last
+
+The "activate" signal
+
+void user_function (GtkEntry *entry,
+ gpointer user_data) : Run Last / Action
+
+The "backspace" signal
+
+void user_function (GtkEntry *entry,
+ gpointer user_data) : Run Last / Action
+
+The "copy_clipboard" signal
+
+void user_function (GtkEntry *entry,
+ gpointer user_data) : Run Last / Action
+
+The "cut_clipboard" signal
+
+void user_function (GtkEntry *entry,
+ gpointer user_data) : Run Last / Action
+
+The "delete_from_cursor" signal
+
+void user_function (GtkEntry *entry,
+ GtkDeleteType type,
+ gint count,
+ gpointer user_data) : Run Last / Action
+
+The "icon_press" signal
+
+void user_function (GtkEntry *entry,
+ GtkEntryIconPosition icon_pos,
+ GdkEvent *event,
+ gpointer user_data) : Run Last
+
+The "icon_release" signal
+
+void user_function (GtkEntry *entry,
+ GtkEntryIconPosition icon_pos,
+ GdkEvent *event,
+ gpointer user_data) : Run Last
+
+The "insert_at_cursor" signal
+
+void user_function (GtkEntry *entry,
+ gchar *string,
+ gpointer user_data) : Run Last / Action
+
+The "move_cursor" signal
+
+void user_function (GtkEntry *entry,
+ GtkMovementStep step,
+ gint count,
+ gboolean extend_selection,
+ gpointer user_data) : Run Last / Action
+
+The "paste_clipboard" signal
+
+void user_function (GtkEntry *entry,
+ gpointer user_data) : Run Last / Action
+
+The "populate_popup" signal
+
+void user_function (GtkEntry *entry,
+ GtkMenu *menu,
+ gpointer user_data) : Run Last
+
+The "preedit_changed" signal
+
+void user_function (GtkEntry *entry,
+ gchar *preedit,
+ gpointer user_data) : Run Last / Action
+
+The "toggle_overwrite" signal
+
+void user_function (GtkEntry *entry,
+ gpointer user_data) : Run Last / Action
+
+The "deleted_text" signal
+
+void user_function (GtkEntryBuffer *entrybuffer,
+ guint arg1,
+ guint arg2,
+ gpointer user_data) : Run First
+
+The "inserted_text" signal
+
+void user_function (GtkEntryBuffer *entrybuffer,
+ guint arg1,
+ gchar *arg2,
+ guint arg3,
+ gpointer user_data) : Run First
+
+The "action_activated" signal
+
+void user_function (GtkEntryCompletion *widget,
+ gint index,
+ gpointer user_data) : Run Last
+
+The "cursor_on_match" signal
+
+gboolean user_function (GtkEntryCompletion *widget,
+ GtkTreeModel *model,
+ GtkTreeIter *iter,
+ gpointer user_data) : Run Last
+
+The "insert_prefix" signal
+
+gboolean user_function (GtkEntryCompletion *widget,
+ gchar *prefix,
+ gpointer user_data) : Run Last
+
+The "match_selected" signal
+
+gboolean user_function (GtkEntryCompletion *widget,
+ GtkTreeModel *model,
+ GtkTreeIter *iter,
+ gpointer user_data) : Run Last
+
+The "activate" signal
+
+void user_function (GtkExpander *expander,
+ gpointer user_data) : Run Last / Action
+
+The "confirm_overwrite" signal
+
+GtkFileChooserConfirmationuser_function (GtkFileChooser *chooser,
+ gpointer user_data) : Run Last
+
+The "current_folder_changed" signal
+
+void user_function (GtkFileChooser *chooser,
+ gpointer user_data) : Run Last
+
+The "file_activated" signal
+
+void user_function (GtkFileChooser *chooser,
+ gpointer user_data) : Run Last
+
+The "selection_changed" signal
+
+void user_function (GtkFileChooser *chooser,
+ gpointer user_data) : Run Last
+
+The "update_preview" signal
+
+void user_function (GtkFileChooser *chooser,
+ gpointer user_data) : Run Last
+
+The "file_set" signal
+
+void user_function (GtkFileChooserButton *widget,
+ gpointer user_data) : Run First
+
+The "font_set" signal
+
+void user_function (GtkFontButton *widget,
+ gpointer user_data) : Run First
+
+The "child_attached" signal
+
+void user_function (GtkHandleBox *handlebox,
+ GtkWidget *widget,
+ gpointer user_data) : Run First
+
+The "child_detached" signal
+
+void user_function (GtkHandleBox *handlebox,
+ GtkWidget *widget,
+ gpointer user_data) : Run First
+
+The "changed" signal
+
+void user_function (GtkHSV *hsv,
+ gpointer user_data) : Run First
+
+The "move" signal
+
+void user_function (GtkHSV *hsv,
+ GtkDirectionType arg1,
+ gpointer user_data) : Run Last / Action
+
+The "changed" signal
+
+void user_function (GtkIconTheme *icon_theme,
+ gpointer user_data) : Run Last
+
+The "activate_cursor_item" signal
+
+gboolean user_function (GtkIconView *iconview,
+ gpointer user_data) : Run Last / Action
+
+The "item_activated" signal
+
+void user_function (GtkIconView *iconview,
+ GtkTreePath *path,
+ gpointer user_data) : Run Last
+
+The "move_cursor" signal
+
+gboolean user_function (GtkIconView *iconview,
+ GtkMovementStep step,
+ gint count,
+ gpointer user_data) : Run Last / Action
+
+The "select_all" signal
+
+void user_function (GtkIconView *iconview,
+ gpointer user_data) : Run Last / Action
+
+The "select_cursor_item" signal
+
+void user_function (GtkIconView *iconview,
+ gpointer user_data) : Run Last / Action
+
+The "selection_changed" signal
+
+void user_function (GtkIconView *iconview,
+ gpointer user_data) : Run First
+
+The "set_scroll_adjustments" signal
+
+void user_function (GtkIconView *horizontal,
+ GtkAdjustment *vertical,
+ GtkAdjustment *arg2,
+ gpointer user_data) : Run Last
+
+The "toggle_cursor_item" signal
+
+void user_function (GtkIconView *iconview,
+ gpointer user_data) : Run Last / Action
+
+The "unselect_all" signal
+
+void user_function (GtkIconView *iconview,
+ gpointer user_data) : Run Last / Action
+
+The "commit" signal
+
+void user_function (GtkIMContext *context,
+ gchar *str,
+ gpointer user_data) : Run Last
+
+The "delete_surrounding" signal
+
+gboolean user_function (GtkIMContext *context,
+ gint offset,
+ gint n_chars,
+ gpointer user_data) : Run Last
+
+The "preedit_changed" signal
+
+void user_function (GtkIMContext *context,
+ gpointer user_data) : Run Last
+
+The "preedit_end" signal
+
+void user_function (GtkIMContext *context,
+ gpointer user_data) : Run Last
+
+The "preedit_start" signal
+
+void user_function (GtkIMContext *context,
+ gpointer user_data) : Run Last
+
+The "retrieve_surrounding" signal
+
+gboolean user_function (GtkIMContext *context,
+ gpointer user_data) : Run Last
+
+The "close" signal
+
+void user_function (GtkInfoBar *arg0,
+ gpointer user_data) : Run Last / Action
+
+The "response" signal
+
+void user_function (GtkInfoBar *info_bar,
+ gint response_id,
+ gpointer user_data) : Run Last
+
+The "disable_device" signal
+
+void user_function (GtkInputDialog *inputdialog,
+ GdkDevice *deviceid,
+ gpointer user_data) : Run Last
+
+The "enable_device" signal
+
+void user_function (GtkInputDialog *inputdialog,
+ GdkDevice *deviceid,
+ gpointer user_data) : Run Last
+
+The "deselect" signal
+
+void user_function (GtkItem *item,
+ gpointer user_data) : Run First
+
+The "select" signal
+
+void user_function (GtkItem *item,
+ gpointer user_data) : Run First
+
+The "toggle" signal
+
+void user_function (GtkItem *item,
+ gpointer user_data) : Run First
+
+The "activate_current_link" signal
+
+void user_function (GtkLabel *label,
+ gpointer user_data) : Run Last / Action
+
+The "activate_link" signal
+
+gboolean user_function (GtkLabel *label,
+ gchar *uri,
+ gpointer user_data) : Run Last
+
+The "copy_clipboard" signal
+
+void user_function (GtkLabel *label,
+ gpointer user_data) : Run Last / Action
+
+The "move_cursor" signal
+
+void user_function (GtkLabel *entry,
+ GtkMovementStep step,
+ gint count,
+ gboolean extend_selection,
+ gpointer user_data) : Run Last / Action
+
+The "populate_popup" signal
+
+void user_function (GtkLabel *label,
+ GtkMenu *menu,
+ gpointer user_data) : Run Last
+
+The "set_scroll_adjustments" signal
+
+void user_function (GtkLayout *horizontal,
+ GtkAdjustment *vertical,
+ GtkAdjustment *arg2,
+ gpointer user_data) : Run Last / Action
+
+The "select_child" signal
+
+void user_function (GtkList *list,
+ GtkWidget *widget,
+ gpointer user_data) : Run First
+
+The "selection_changed" signal
+
+void user_function (GtkList *list,
+ gpointer user_data) : Run First
+
+The "unselect_child" signal
+
+void user_function (GtkList *list,
+ GtkWidget *widget,
+ gpointer user_data) : Run First
+
+The "end_selection" signal
+
+void user_function (GtkListItem *listitem,
+ gpointer user_data) : Run Last / Action
+
+The "extend_selection" signal
+
+void user_function (GtkListItem *listitem,
+ GtkScrollType scroll_type,
+ gfloat position,
+ gboolean auto_start_selection,
+ gpointer user_data) : Run Last / Action
+
+The "scroll_horizontal" signal
+
+void user_function (GtkListItem *listitem,
+ GtkScrollType scroll_type,
+ gfloat position,
+ gpointer user_data) : Run Last / Action
+
+The "scroll_vertical" signal
+
+void user_function (GtkListItem *listitem,
+ GtkScrollType scroll_type,
+ gfloat position,
+ gpointer user_data) : Run Last / Action
+
+The "select_all" signal
+
+void user_function (GtkListItem *listitem,
+ gpointer user_data) : Run Last / Action
+
+The "start_selection" signal
+
+void user_function (GtkListItem *listitem,
+ gpointer user_data) : Run Last / Action
+
+The "toggle_add_mode" signal
+
+void user_function (GtkListItem *listitem,
+ gpointer user_data) : Run Last / Action
+
+The "toggle_focus_row" signal
+
+void user_function (GtkListItem *listitem,
+ gpointer user_data) : Run Last / Action
+
+The "undo_selection" signal
+
+void user_function (GtkListItem *listitem,
+ gpointer user_data) : Run Last / Action
+
+The "unselect_all" signal
+
+void user_function (GtkListItem *listitem,
+ gpointer user_data) : Run Last / Action
+
+The "move_scroll" signal
+
+void user_function (GtkMenu *menu,
+ GtkScrollType arg1,
+ gpointer user_data) : Run Last / Action
+
+The "activate" signal
+
+void user_function (GtkMenuItem *menuitem,
+ gpointer user_data) : Run First / Action
+
+The "activate_item" signal
+
+void user_function (GtkMenuItem *menuitem,
+ gpointer user_data) : Run First
+
+The "toggle_size_allocate" signal
+
+void user_function (GtkMenuItem *menuitem,
+ gint arg1,
+ gpointer user_data) : Run First
+
+The "toggle_size_request" signal
+
+void user_function (GtkMenuItem *menuitem,
+ gpointer arg1,
+ gpointer user_data) : Run First
+
+The "activate_current" signal
+
+void user_function (GtkMenuShell *menushell,
+ gboolean force_hide,
+ gpointer user_data) : Run Last / Action
+
+The "cancel" signal
+
+void user_function (GtkMenuShell *menushell,
+ gpointer user_data) : Run Last / Action
+
+The "cycle_focus" signal
+
+void user_function (GtkMenuShell *menushell,
+ GtkDirectionType arg1,
+ gpointer user_data) : Run Last / Action
+
+The "deactivate" signal
+
+void user_function (GtkMenuShell *menushell,
+ gpointer user_data) : Run First
+
+The "move_current" signal
+
+void user_function (GtkMenuShell *menushell,
+ GtkMenuDirectionType direction,
+ gpointer user_data) : Run Last / Action
+
+The "move_selected" signal
+
+gboolean user_function (GtkMenuShell *menu_shell,
+ gint distance,
+ gpointer user_data) : Run Last
+
+The "selection_done" signal
+
+void user_function (GtkMenuShell *menushell,
+ gpointer user_data) : Run First
+
+The "show_menu" signal
+
+void user_function (GtkMenuToolButton *button,
+ gpointer user_data) : Run First
+
+The "change_current_page" signal
+
+gboolean user_function (GtkNotebook *notebook,
+ gint arg1,
+ gpointer user_data) : Run Last / Action
+
+The "create_window" signal
+
+GtkNotebook* user_function (GtkNotebook *notebook,
+ GtkWidget *page,
+ gint x,
+ gint y,
+ gpointer user_data) : Run Last
+
+The "focus_tab" signal
+
+gboolean user_function (GtkNotebook *notebook,
+ GtkNotebookTab arg1,
+ gpointer user_data) : Run Last / Action
+
+The "move_focus_out" signal
+
+void user_function (GtkNotebook *notebook,
+ GtkDirectionType arg1,
+ gpointer user_data) : Run Last / Action
+
+The "page_added" signal
+
+void user_function (GtkNotebook *notebook,
+ GtkWidget *child,
+ guint page_num,
+ gpointer user_data) : Run Last
+
+The "page_removed" signal
+
+void user_function (GtkNotebook *notebook,
+ GtkWidget *child,
+ guint page_num,
+ gpointer user_data) : Run Last
+
+The "page_reordered" signal
+
+void user_function (GtkNotebook *notebook,
+ GtkWidget *child,
+ guint page_num,
+ gpointer user_data) : Run Last
+
+The "reorder_tab" signal
+
+gboolean user_function (GtkNotebook *notebook,
+ GtkDirectionType arg1,
+ gboolean arg2,
+ gpointer user_data) : Run Last / Action
+
+The "select_page" signal
+
+gboolean user_function (GtkNotebook *notebook,
+ gboolean arg1,
+ gpointer user_data) : Run Last / Action
+
+The "switch_page" signal
+
+void user_function (GtkNotebook *notebook,
+ GtkNotebookPage *page,
+ guint page_num,
+ gpointer user_data) : Run Last
+
+The "destroy" signal
+
+void user_function (GtkObject *object,
+ gpointer user_data) : Cleanup / No Recursion / No Hooks
+
+The "activate" signal
+
+void user_function (GtkOldEditable *oldeditable,
+ gpointer user_data) : Run Last / Action
+
+The "copy_clipboard" signal
+
+void user_function (GtkOldEditable *oldeditable,
+ gpointer user_data) : Run Last / Action
+
+The "cut_clipboard" signal
+
+void user_function (GtkOldEditable *oldeditable,
+ gpointer user_data) : Run Last / Action
+
+The "kill_char" signal
+
+void user_function (GtkOldEditable *oldeditable,
+ gint arg1,
+ gpointer user_data) : Run Last / Action
+
+The "kill_line" signal
+
+void user_function (GtkOldEditable *oldeditable,
+ gint arg1,
+ gpointer user_data) : Run Last / Action
+
+The "kill_word" signal
+
+void user_function (GtkOldEditable *oldeditable,
+ gint arg1,
+ gpointer user_data) : Run Last / Action
+
+The "move_cursor" signal
+
+void user_function (GtkOldEditable *oldeditable,
+ gint arg1,
+ gint arg2,
+ gpointer user_data) : Run Last / Action
+
+The "move_page" signal
+
+void user_function (GtkOldEditable *oldeditable,
+ gint arg1,
+ gint arg2,
+ gpointer user_data) : Run Last / Action
+
+The "move_to_column" signal
+
+void user_function (GtkOldEditable *oldeditable,
+ gint arg1,
+ gpointer user_data) : Run Last / Action
+
+The "move_to_row" signal
+
+void user_function (GtkOldEditable *oldeditable,
+ gint arg1,
+ gpointer user_data) : Run Last / Action
+
+The "move_word" signal
+
+void user_function (GtkOldEditable *oldeditable,
+ gint arg1,
+ gpointer user_data) : Run Last / Action
+
+The "paste_clipboard" signal
+
+void user_function (GtkOldEditable *oldeditable,
+ gpointer user_data) : Run Last / Action
+
+The "set_editable" signal
+
+void user_function (GtkOldEditable *oldeditable,
+ gboolean arg1,
+ gpointer user_data) : Run Last / Action
+
+The "changed" signal
+
+void user_function (GtkOptionMenu *optionmenu,
+ gpointer user_data) : Run Last
+
+The "accept_position" signal
+
+gboolean user_function (GtkPaned *widget,
+ gpointer user_data) : Run Last / Action
+
+The "cancel_position" signal
+
+gboolean user_function (GtkPaned *widget,
+ gpointer user_data) : Run Last / Action
+
+The "cycle_child_focus" signal
+
+gboolean user_function (GtkPaned *widget,
+ gboolean reversed,
+ gpointer user_data) : Run Last / Action
+
+The "cycle_handle_focus" signal
+
+gboolean user_function (GtkPaned *widget,
+ gboolean reversed,
+ gpointer user_data) : Run Last / Action
+
+The "move_handle" signal
+
+gboolean user_function (GtkPaned *widget,
+ GtkScrollType scroll_type,
+ gpointer user_data) : Run Last / Action
+
+The "toggle_handle_focus" signal
+
+gboolean user_function (GtkPaned *widget,
+ gpointer user_data) : Run Last / Action
+
+The "embedded" signal
+
+void user_function (GtkPlug *plug,
+ gpointer user_data) : Run Last
+
+The "details_acquired" signal
+
+void user_function (GtkPrinter *printer,
+ gboolean success,
+ gpointer user_data) : Run Last
+
+The "status_changed" signal
+
+void user_function (GtkPrintJob *job,
+ gpointer user_data) : Run Last
+
+The "begin_print" signal
+
+void user_function (GtkPrintOperation *operation,
+ GtkPrintContext *context,
+ gpointer user_data) : Run Last
+
+The "create_custom_widget" signal
+
+GObject* user_function (GtkPrintOperation *operation,
+ gpointer user_data) : Run Last
+
+The "custom_widget_apply" signal
+
+void user_function (GtkPrintOperation *operation,
+ GtkWidget *widget,
+ gpointer user_data) : Run Last
+
+The "done" signal
+
+void user_function (GtkPrintOperation *operation,
+ GtkPrintOperationResult result,
+ gpointer user_data) : Run Last
+
+The "draw_page" signal
+
+void user_function (GtkPrintOperation *operation,
+ GtkPrintContext *context,
+ gint page_nr,
+ gpointer user_data) : Run Last
+
+The "end_print" signal
+
+void user_function (GtkPrintOperation *operation,
+ GtkPrintContext *context,
+ gpointer user_data) : Run Last
+
+The "paginate" signal
+
+gboolean user_function (GtkPrintOperation *operation,
+ GtkPrintContext *context,
+ gpointer user_data) : Run Last
+
+The "preview" signal
+
+gboolean user_function (GtkPrintOperation *operation,
+ GtkPrintOperationPreview *preview,
+ GtkPrintContext *context,
+ GtkWindow *parent,
+ gpointer user_data) : Run Last
+
+The "request_page_setup" signal
+
+void user_function (GtkPrintOperation *operation,
+ GtkPrintContext *context,
+ gint page_nr,
+ GtkPageSetup *setup,
+ gpointer user_data) : Run Last
+
+The "status_changed" signal
+
+void user_function (GtkPrintOperation *operation,
+ gpointer user_data) : Run Last
+
+The "update_custom_widget" signal
+
+void user_function (GtkPrintOperation *operation,
+ GtkWidget *widget,
+ GtkPageSetup *setup,
+ GtkPrintSettings *settings,
+ gpointer user_data) : Run Last
+
+The "got_page_size" signal
+
+void user_function (GtkPrintOperationPreview *preview,
+ GtkPrintContext *context,
+ GtkPageSetup *page_setup,
+ gpointer user_data) : Run Last
+
+The "ready" signal
+
+void user_function (GtkPrintOperationPreview *preview,
+ GtkPrintContext *context,
+ gpointer user_data) : Run Last
+
+The "changed" signal
+
+void user_function (GtkRadioAction *action,
+ GtkRadioAction *current,
+ gpointer user_data) : Run First / No Recursion
+
+The "group_changed" signal
+
+void user_function (GtkRadioButton *style,
+ gpointer user_data) : Run First
+
+The "group_changed" signal
+
+void user_function (GtkRadioMenuItem *radiomenuitem,
+ gpointer user_data) : Run First
+
+The "adjust_bounds" signal
+
+void user_function (GtkRange *range,
+ gdouble arg1,
+ gpointer user_data) : Run Last
+
+The "change_value" signal
+
+gboolean user_function (GtkRange *range,
+ GtkScrollType scroll,
+ gdouble value,
+ gpointer user_data) : Run Last
+
+The "move_slider" signal
+
+void user_function (GtkRange *range,
+ GtkScrollType step,
+ gpointer user_data) : Run Last / Action
+
+The "value_changed" signal
+
+void user_function (GtkRange *range,
+ gpointer user_data) : Run Last
+
+The "item_activated" signal
+
+void user_function (GtkRecentChooser *chooser,
+ gpointer user_data) : Run Last
+
+The "selection_changed" signal
+
+void user_function (GtkRecentChooser *chooser,
+ gpointer user_data) : Run Last
+
+The "changed" signal
+
+void user_function (GtkRecentManager *recent_manager,
+ gpointer user_data) : Run First
+
+The "format_value" signal
+
+gchar* user_function (GtkScale *scale,
+ gdouble value,
+ gpointer user_data) : Run Last
+
+The "popdown" signal
+
+void user_function (GtkScaleButton *button,
+ gpointer user_data) : Run Last / Action
+
+The "popup" signal
+
+void user_function (GtkScaleButton *button,
+ gpointer user_data) : Run Last / Action
+
+The "value_changed" signal
+
+void user_function (GtkScaleButton *button,
+ gdouble value,
+ gpointer user_data) : Run Last
+
+The "move_focus_out" signal
+
+void user_function (GtkScrolledWindow *scrolledwindow,
+ GtkDirectionType arg1,
+ gpointer user_data) : Run Last / Action
+
+The "scroll_child" signal
+
+gboolean user_function (GtkScrolledWindow *scrolledwindow,
+ GtkScrollType arg1,
+ gboolean arg2,
+ gpointer user_data) : Run Last / Action
+
+The "plug_added" signal
+
+void user_function (GtkSocket *socket_,
+ gpointer user_data) : Run Last
+
+The "plug_removed" signal
+
+gboolean user_function (GtkSocket *socket_,
+ gpointer user_data) : Run Last
+
+The "change_value" signal
+
+void user_function (GtkSpinButton *spinbutton,
+ GtkScrollType arg1,
+ gpointer user_data) : Run Last / Action
+
+The "input" signal
+
+gint user_function (GtkSpinButton *spinbutton,
+ gpointer arg1,
+ gpointer user_data) : Run Last
+
+The "output" signal
+
+gboolean user_function (GtkSpinButton *spin_button,
+ gpointer user_data) : Run Last
+
+The "value_changed" signal
+
+void user_function (GtkSpinButton *spinbutton,
+ gpointer user_data) : Run Last
+
+The "wrapped" signal
+
+void user_function (GtkSpinButton *spinbutton,
+ gpointer user_data) : Run Last
+
+The "text_popped" signal
+
+void user_function (GtkStatusbar *statusbar,
+ guint context_id,
+ gchar *text,
+ gpointer user_data) : Run Last
+
+The "text_pushed" signal
+
+void user_function (GtkStatusbar *statusbar,
+ guint context_id,
+ gchar *text,
+ gpointer user_data) : Run Last
+
+The "activate" signal
+
+void user_function (GtkStatusIcon *status_icon,
+ gpointer user_data) : Run First / Action
+
+The "button_press_event" signal
+
+gboolean user_function (GtkStatusIcon *status_icon,
+ GdkEventButton *event,
+ gpointer user_data) : Run Last
+
+The "button_release_event" signal
+
+gboolean user_function (GtkStatusIcon *status_icon,
+ GdkEventButton *event,
+ gpointer user_data) : Run Last
+
+The "popup_menu" signal
+
+void user_function (GtkStatusIcon *status_icon,
+ guint button,
+ guint activate_time,
+ gpointer user_data) : Run First / Action
+
+The "query_tooltip" signal
+
+gboolean user_function (GtkStatusIcon *status_icon,
+ gint x,
+ gint y,
+ gboolean keyboard_mode,
+ GtkTooltip *tooltip,
+ gpointer user_data) : Run Last
+
+The "scroll_event" signal
+
+gboolean user_function (GtkStatusIcon *status_icon,
+ GdkEventScroll *event,
+ gpointer user_data) : Run Last
+
+The "size_changed" signal
+
+gboolean user_function (GtkStatusIcon *status_icon,
+ gint size,
+ gpointer user_data) : Run Last
+
+The "realize" signal
+
+void user_function (GtkStyle *style,
+ gpointer user_data) : Run First
+
+The "unrealize" signal
+
+void user_function (GtkStyle *style,
+ gpointer user_data) : Run First
+
+The "set_scroll_adjustments" signal
+
+void user_function (GtkText *text,
+ GtkAdjustment *arg1,
+ GtkAdjustment *arg2,
+ gpointer user_data) : Run Last
+
+The "apply_tag" signal
+
+void user_function (GtkTextBuffer *textbuffer,
+ GtkTextTag *tag,
+ GtkTextIter *start,
+ GtkTextIter *end,
+ gpointer user_data) : Run Last
+
+The "begin_user_action" signal
+
+void user_function (GtkTextBuffer *textbuffer,
+ gpointer user_data) : Run Last
+
+The "changed" signal
+
+void user_function (GtkTextBuffer *textbuffer,
+ gpointer user_data) : Run Last
+
+The "delete_range" signal
+
+void user_function (GtkTextBuffer *textbuffer,
+ GtkTextIter *start,
+ GtkTextIter *end,
+ gpointer user_data) : Run Last
+
+The "end_user_action" signal
+
+void user_function (GtkTextBuffer *textbuffer,
+ gpointer user_data) : Run Last
+
+The "insert_child_anchor" signal
+
+void user_function (GtkTextBuffer *textbuffer,
+ GtkTextIter *location,
+ GtkTextChildAnchor *anchor,
+ gpointer user_data) : Run Last
+
+The "insert_pixbuf" signal
+
+void user_function (GtkTextBuffer *textbuffer,
+ GtkTextIter *location,
+ GdkPixbuf *pixbuf,
+ gpointer user_data) : Run Last
+
+The "insert_text" signal
+
+void user_function (GtkTextBuffer *textbuffer,
+ GtkTextIter *location,
+ gchar *text,
+ gint len,
+ gpointer user_data) : Run Last
+
+The "mark_deleted" signal
+
+void user_function (GtkTextBuffer *textbuffer,
+ GtkTextMark *mark,
+ gpointer user_data) : Run Last
+
+The "mark_set" signal
+
+void user_function (GtkTextBuffer *textbuffer,
+ GtkTextIter *location,
+ GtkTextMark *mark,
+ gpointer user_data) : Run Last
+
+The "modified_changed" signal
+
+void user_function (GtkTextBuffer *textbuffer,
+ gpointer user_data) : Run Last
+
+The "paste_done" signal
+
+void user_function (GtkTextBuffer *textbuffer,
+ GtkClipboard *arg1,
+ gpointer user_data) : Run Last
+
+The "remove_tag" signal
+
+void user_function (GtkTextBuffer *textbuffer,
+ GtkTextTag *tag,
+ GtkTextIter *start,
+ GtkTextIter *end,
+ gpointer user_data) : Run Last
+
+The "event" signal
+
+gboolean user_function (GtkTextTag *tag,
+ GObject *object,
+ GdkEvent *event,
+ GtkTextIter *iter,
+ gpointer user_data) : Run Last
+
+The "tag_added" signal
+
+void user_function (GtkTextTagTable *texttagtable,
+ GtkTextTag *arg1,
+ gpointer user_data) : Run Last
+
+The "tag_changed" signal
+
+void user_function (GtkTextTagTable *texttagtable,
+ GtkTextTag *arg1,
+ gboolean arg2,
+ gpointer user_data) : Run Last
+
+The "tag_removed" signal
+
+void user_function (GtkTextTagTable *texttagtable,
+ GtkTextTag *arg1,
+ gpointer user_data) : Run Last
+
+The "backspace" signal
+
+void user_function (GtkTextView *text_view,
+ gpointer user_data) : Run Last / Action
+
+The "copy_clipboard" signal
+
+void user_function (GtkTextView *text_view,
+ gpointer user_data) : Run Last / Action
+
+The "cut_clipboard" signal
+
+void user_function (GtkTextView *text_view,
+ gpointer user_data) : Run Last / Action
+
+The "delete_from_cursor" signal
+
+void user_function (GtkTextView *text_view,
+ GtkDeleteType type,
+ gint count,
+ gpointer user_data) : Run Last / Action
+
+The "insert_at_cursor" signal
+
+void user_function (GtkTextView *text_view,
+ gchar *string,
+ gpointer user_data) : Run Last / Action
+
+The "move_cursor" signal
+
+void user_function (GtkTextView *text_view,
+ GtkMovementStep step,
+ gint count,
+ gboolean extend_selection,
+ gpointer user_data) : Run Last / Action
+
+The "move_viewport" signal
+
+void user_function (GtkTextView *text_view,
+ GtkScrollStep step,
+ gint count,
+ gpointer user_data) : Run Last / Action
+
+The "page_horizontally" signal
+
+void user_function (GtkTextView *text_view,
+ gint count,
+ gboolean extend_selection,
+ gpointer user_data) : Run Last / Action
+
+The "paste_clipboard" signal
+
+void user_function (GtkTextView *text_view,
+ gpointer user_data) : Run Last / Action
+
+The "populate_popup" signal
+
+void user_function (GtkTextView *entry,
+ GtkMenu *menu,
+ gpointer user_data) : Run Last
+
+The "preedit_changed" signal
+
+void user_function (GtkTextView *text_view,
+ gchar *preedit,
+ gpointer user_data) : Run Last / Action
+
+The "select_all" signal
+
+void user_function (GtkTextView *text_view,
+ gboolean select,
+ gpointer user_data) : Run Last / Action
+
+The "set_anchor" signal
+
+void user_function (GtkTextView *text_view,
+ gpointer user_data) : Run Last / Action
+
+The "set_scroll_adjustments" signal
+
+void user_function (GtkTextView *horizontal,
+ GtkAdjustment *vertical,
+ GtkAdjustment *arg2,
+ gpointer user_data) : Run Last / Action
+
+The "toggle_cursor_visible" signal
+
+void user_function (GtkTextView *text_view,
+ gpointer user_data) : Run Last / Action
+
+The "toggle_overwrite" signal
+
+void user_function (GtkTextView *text_view,
+ gpointer user_data) : Run Last / Action
+
+The "start_query" signal
+
+void user_function (GtkTipsQuery *tipsquery,
+ gpointer user_data) : Run First
+
+The "stop_query" signal
+
+void user_function (GtkTipsQuery *tipsquery,
+ gpointer user_data) : Run First
+
+The "widget_entered" signal
+
+void user_function (GtkTipsQuery *tipsquery,
+ GtkWidget *widget,
+ gchar *tip_text,
+ gchar *tip_private,
+ gpointer user_data) : Run Last
+
+The "widget_selected" signal
+
+gboolean user_function (GtkTipsQuery *tipsquery,
+ GtkWidget *widget,
+ gchar *tip_text,
+ gchar *tip_private,
+ GdkEventButton *event,
+ gpointer user_data) : Run Last
+
+The "toggled" signal
+
+void user_function (GtkToggleAction *toggleaction,
+ gpointer user_data) : Run First
+
+The "toggled" signal
+
+void user_function (GtkToggleButton *togglebutton,
+ gpointer user_data) : Run First
+
+The "toggled" signal
+
+void user_function (GtkToggleToolButton *toggle_tool_button,
+ gpointer user_data) : Run First
+
+The "focus_home_or_end" signal
+
+gboolean user_function (GtkToolbar *toolbar,
+ gboolean focus_home,
+ gpointer user_data) : Run Last / Action
+
+The "orientation_changed" signal
+
+void user_function (GtkToolbar *toolbar,
+ GtkOrientation orientation,
+ gpointer user_data) : Run First
+
+The "popup_context_menu" signal
+
+gboolean user_function (GtkToolbar *toolbar,
+ gint x,
+ gint y,
+ gint button,
+ gpointer user_data) : Run Last
+
+The "style_changed" signal
+
+void user_function (GtkToolbar *toolbar,
+ GtkToolbarStyle style,
+ gpointer user_data) : Run First
+
+The "clicked" signal
+
+void user_function (GtkToolButton *toolbutton,
+ gpointer user_data) : Run First / Action
+
+The "create_menu_proxy" signal
+
+gboolean user_function (GtkToolItem *tool_item,
+ gpointer user_data) : Run Last
+
+The "set_tooltip" signal
+
+gboolean user_function (GtkToolItem *tool_item,
+ GtkTooltips *tooltips,
+ gchar *tip_text,
+ gchar *tip_private,
+ gpointer user_data) : Run Last
+
+The "toolbar_reconfigured" signal
+
+void user_function (GtkToolItem *tool_item,
+ gpointer user_data) : Run Last
+
+The "set_scroll_adjustments" signal
+
+void user_function (GtkToolPalette *widget,
+ GtkAdjustment *hadjustment,
+ GtkAdjustment *vadjustment,
+ gpointer user_data) : Run Last / Action
+
+The "select_child" signal
+
+void user_function (GtkTree *tree,
+ GtkWidget *widget,
+ gpointer user_data) : Run First
+
+The "selection_changed" signal
+
+void user_function (GtkTree *tree,
+ gpointer user_data) : Run First
+
+The "unselect_child" signal
+
+void user_function (GtkTree *tree,
+ GtkWidget *widget,
+ gpointer user_data) : Run First
+
+The "collapse" signal
+
+void user_function (GtkTreeItem *treeitem,
+ gpointer user_data) : Run First
+
+The "expand" signal
+
+void user_function (GtkTreeItem *treeitem,
+ gpointer user_data) : Run First
+
+The "row_changed" signal
+
+void user_function (GtkTreeModel *tree_model,
+ GtkTreePath *path,
+ GtkTreeIter *iter,
+ gpointer user_data) : Run Last
+
+The "row_deleted" signal
+
+void user_function (GtkTreeModel *tree_model,
+ GtkTreePath *path,
+ gpointer user_data) : Run First
+
+The "row_has_child_toggled" signal
+
+void user_function (GtkTreeModel *tree_model,
+ GtkTreePath *path,
+ GtkTreeIter *iter,
+ gpointer user_data) : Run Last
+
+The "row_inserted" signal
+
+void user_function (GtkTreeModel *tree_model,
+ GtkTreePath *path,
+ GtkTreeIter *iter,
+ gpointer user_data) : Run First
+
+The "rows_reordered" signal
+
+void user_function (GtkTreeModel *tree_model,
+ GtkTreePath *path,
+ GtkTreeIter *iter,
+ gpointer new_order,
+ gpointer user_data) : Run First
+
+The "changed" signal
+
+void user_function (GtkTreeSelection *treeselection,
+ gpointer user_data) : Run First
+
+The "sort_column_changed" signal
+
+void user_function (GtkTreeSortable *sortable,
+ gpointer user_data) : Run Last
+
+The "columns_changed" signal
+
+void user_function (GtkTreeView *tree_view,
+ gpointer user_data) : Run Last
+
+The "cursor_changed" signal
+
+void user_function (GtkTreeView *tree_view,
+ gpointer user_data) : Run Last
+
+The "expand_collapse_cursor_row" signal
+
+gboolean user_function (GtkTreeView *treeview,
+ gboolean arg1,
+ gboolean arg2,
+ gboolean arg3,
+ gpointer user_data) : Run Last / Action
+
+The "move_cursor" signal
+
+gboolean user_function (GtkTreeView *treeview,
+ GtkMovementStep arg1,
+ gint arg2,
+ gpointer user_data) : Run Last / Action
+
+The "row_activated" signal
+
+void user_function (GtkTreeView *tree_view,
+ GtkTreePath *path,
+ GtkTreeViewColumn *column,
+ gpointer user_data) : Run Last / Action
+
+The "row_collapsed" signal
+
+void user_function (GtkTreeView *tree_view,
+ GtkTreeIter *iter,
+ GtkTreePath *path,
+ gpointer user_data) : Run Last
+
+The "row_expanded" signal
+
+void user_function (GtkTreeView *tree_view,
+ GtkTreeIter *iter,
+ GtkTreePath *path,
+ gpointer user_data) : Run Last
+
+The "select_all" signal
+
+gboolean user_function (GtkTreeView *treeview,
+ gpointer user_data) : Run Last / Action
+
+The "select_cursor_parent" signal
+
+gboolean user_function (GtkTreeView *treeview,
+ gpointer user_data) : Run Last / Action
+
+The "select_cursor_row" signal
+
+gboolean user_function (GtkTreeView *treeview,
+ gboolean arg1,
+ gpointer user_data) : Run Last / Action
+
+The "set_scroll_adjustments" signal
+
+void user_function (GtkTreeView *horizontal,
+ GtkAdjustment *vertical,
+ GtkAdjustment *arg2,
+ gpointer user_data) : Run Last / Action
+
+The "start_interactive_search" signal
+
+gboolean user_function (GtkTreeView *treeview,
+ gpointer user_data) : Run Last / Action
+
+The "test_collapse_row" signal
+
+gboolean user_function (GtkTreeView *tree_view,
+ GtkTreeIter *iter,
+ GtkTreePath *path,
+ gpointer user_data) : Run Last
+
+The "test_expand_row" signal
+
+gboolean user_function (GtkTreeView *tree_view,
+ GtkTreeIter *iter,
+ GtkTreePath *path,
+ gpointer user_data) : Run Last
+
+The "toggle_cursor_row" signal
+
+gboolean user_function (GtkTreeView *treeview,
+ gpointer user_data) : Run Last / Action
+
+The "unselect_all" signal
+
+gboolean user_function (GtkTreeView *treeview,
+ gpointer user_data) : Run Last / Action
+
+The "clicked" signal
+
+void user_function (GtkTreeViewColumn *treeviewcolumn,
+ gpointer user_data) : Run Last
+
+The "actions_changed" signal
+
+void user_function (GtkUIManager *merge,
+ gpointer user_data) : Run First / No Recursion
+
+The "add_widget" signal
+
+void user_function (GtkUIManager *merge,
+ GtkWidget *widget,
+ gpointer user_data) : Run First / No Recursion
+
+The "connect_proxy" signal
+
+void user_function (GtkUIManager *uimanager,
+ GtkAction *action,
+ GtkWidget *proxy,
+ gpointer user_data) : Run First / No Recursion
+
+The "disconnect_proxy" signal
+
+void user_function (GtkUIManager *uimanager,
+ GtkAction *action,
+ GtkWidget *proxy,
+ gpointer user_data) : Run First / No Recursion
+
+The "post_activate" signal
+
+void user_function (GtkUIManager *uimanager,
+ GtkAction *action,
+ gpointer user_data) : Run First / No Recursion
+
+The "pre_activate" signal
+
+void user_function (GtkUIManager *uimanager,
+ GtkAction *action,
+ gpointer user_data) : Run First / No Recursion
+
+The "set_scroll_adjustments" signal
+
+void user_function (GtkViewport *horizontal,
+ GtkAdjustment *vertical,
+ GtkAdjustment *arg2,
+ gpointer user_data) : Run Last / Action
+
+The "accel_closures_changed" signal
+
+void user_function (GtkWidget *widget,
+ gpointer user_data)
+
+The "button_press_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventButton *event,
+ gpointer user_data) : Run Last
+
+The "button_release_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventButton *event,
+ gpointer user_data) : Run Last
+
+The "can_activate_accel" signal
+
+gboolean user_function (GtkWidget *widget,
+ guint signal_id,
+ gpointer user_data) : Run Last
+
+The "child_notify" signal
+
+void user_function (GtkWidget *widget,
+ GParamSpec *pspec,
+ gpointer user_data) : Run First / No Recursion / Has Details / No Hooks
+
+The "client_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventClient *event,
+ gpointer user_data) : Run Last
+
+The "composited_changed" signal
+
+void user_function (GtkWidget *widget,
+ gpointer user_data) : Run Last / Action
+
+The "configure_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventConfigure *event,
+ gpointer user_data) : Run Last
+
+The "damage_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEvent *event,
+ gpointer user_data) : Run Last
+
+The "delete_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEvent *event,
+ gpointer user_data) : Run Last
+
+The "destroy_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEvent *event,
+ gpointer user_data) : Run Last
+
+The "direction_changed" signal
+
+void user_function (GtkWidget *widget,
+ GtkTextDirection previous_direction,
+ gpointer user_data) : Run First
+
+The "drag_begin" signal
+
+void user_function (GtkWidget *widget,
+ GdkDragContext *drag_context,
+ gpointer user_data) : Run Last
+
+The "drag_data_delete" signal
+
+void user_function (GtkWidget *widget,
+ GdkDragContext *drag_context,
+ gpointer user_data) : Run Last
+
+The "drag_data_get" signal
+
+void user_function (GtkWidget *widget,
+ GdkDragContext *drag_context,
+ GtkSelectionData *data,
+ guint info,
+ guint time,
+ gpointer user_data) : Run Last
+
+The "drag_data_received" signal
+
+void user_function (GtkWidget *widget,
+ GdkDragContext *drag_context,
+ gint x,
+ gint y,
+ GtkSelectionData *data,
+ guint info,
+ guint time,
+ gpointer user_data) : Run Last
+
+The "drag_drop" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkDragContext *drag_context,
+ gint x,
+ gint y,
+ guint time,
+ gpointer user_data) : Run Last
+
+The "drag_end" signal
+
+void user_function (GtkWidget *widget,
+ GdkDragContext *drag_context,
+ gpointer user_data) : Run Last
+
+The "drag_failed" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkDragContext *drag_context,
+ GtkDragResult result,
+ gpointer user_data) : Run Last
+
+The "drag_leave" signal
+
+void user_function (GtkWidget *widget,
+ GdkDragContext *drag_context,
+ guint time,
+ gpointer user_data) : Run Last
+
+The "drag_motion" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkDragContext *drag_context,
+ gint x,
+ gint y,
+ guint time,
+ gpointer user_data) : Run Last
+
+The "enter_notify_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventCrossing *event,
+ gpointer user_data) : Run Last
+
+The "event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEvent *event,
+ gpointer user_data) : Run Last
+
+The "event_after" signal
+
+void user_function (GtkWidget *widget,
+ GdkEvent *event,
+ gpointer user_data)
+
+The "expose_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventExpose *event,
+ gpointer user_data) : Run Last
+
+The "focus" signal
+
+gboolean user_function (GtkWidget *widget,
+ GtkDirectionType direction,
+ gpointer user_data) : Run Last
+
+The "focus_in_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventFocus *event,
+ gpointer user_data) : Run Last
+
+The "focus_out_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventFocus *event,
+ gpointer user_data) : Run Last
+
+The "grab_broken_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEvent *event,
+ gpointer user_data) : Run Last
+
+The "grab_focus" signal
+
+void user_function (GtkWidget *widget,
+ gpointer user_data) : Run Last / Action
+
+The "grab_notify" signal
+
+void user_function (GtkWidget *widget,
+ gboolean was_grabbed,
+ gpointer user_data) : Run First
+
+The "hide" signal
+
+void user_function (GtkWidget *widget,
+ gpointer user_data) : Run First
+
+The "hierarchy_changed" signal
+
+void user_function (GtkWidget *widget,
+ GtkWidget *previous_toplevel,
+ gpointer user_data) : Run Last
+
+The "key_press_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventKey *event,
+ gpointer user_data) : Run Last
+
+The "key_release_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventKey *event,
+ gpointer user_data) : Run Last
+
+The "keynav_failed" signal
+
+gboolean user_function (GtkWidget *widget,
+ GtkDirectionType direction,
+ gpointer user_data) : Run Last
+
+The "leave_notify_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventCrossing *event,
+ gpointer user_data) : Run Last
+
+The "map" signal
+
+void user_function (GtkWidget *widget,
+ gpointer user_data) : Run First
+
+The "map_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEvent *event,
+ gpointer user_data) : Run Last
+
+The "mnemonic_activate" signal
+
+gboolean user_function (GtkWidget *widget,
+ gboolean arg1,
+ gpointer user_data) : Run Last
+
+The "motion_notify_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventMotion *event,
+ gpointer user_data) : Run Last
+
+The "move_focus" signal
+
+void user_function (GtkWidget *widget,
+ GtkDirectionType direction,
+ gpointer user_data) : Run Last / Action
+
+The "no_expose_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventNoExpose *event,
+ gpointer user_data) : Run Last
+
+The "parent_set" signal
+
+void user_function (GtkWidget *widget,
+ GtkObject *old_parent,
+ gpointer user_data) : Run First
+
+The "popup_menu" signal
+
+gboolean user_function (GtkWidget *widget,
+ gpointer user_data) : Run Last / Action
+
+The "property_notify_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventProperty *event,
+ gpointer user_data) : Run Last
+
+The "proximity_in_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventProximity *event,
+ gpointer user_data) : Run Last
+
+The "proximity_out_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventProximity *event,
+ gpointer user_data) : Run Last
+
+The "query_tooltip" signal
+
+gboolean user_function (GtkWidget *widget,
+ gint x,
+ gint y,
+ gboolean keyboard_mode,
+ GtkTooltip *tooltip,
+ gpointer user_data) : Run Last
+
+The "realize" signal
+
+void user_function (GtkWidget *widget,
+ gpointer user_data) : Run First
+
+The "screen_changed" signal
+
+void user_function (GtkWidget *widget,
+ GdkScreen *previous_screen,
+ gpointer user_data) : Run Last
+
+The "scroll_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventScroll *event,
+ gpointer user_data) : Run Last
+
+The "selection_clear_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventSelection *event,
+ gpointer user_data) : Run Last
+
+The "selection_get" signal
+
+void user_function (GtkWidget *widget,
+ GtkSelectionData *data,
+ guint info,
+ guint time,
+ gpointer user_data) : Run Last
+
+The "selection_notify_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventSelection *event,
+ gpointer user_data) : Run Last
+
+The "selection_received" signal
+
+void user_function (GtkWidget *widget,
+ GtkSelectionData *data,
+ guint time,
+ gpointer user_data) : Run Last
+
+The "selection_request_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventSelection *event,
+ gpointer user_data) : Run Last
+
+The "show" signal
+
+void user_function (GtkWidget *widget,
+ gpointer user_data) : Run First
+
+The "show_help" signal
+
+gboolean user_function (GtkWidget *widget,
+ GtkWidgetHelpType help_type,
+ gpointer user_data) : Run Last / Action
+
+The "size_allocate" signal
+
+void user_function (GtkWidget *widget,
+ GtkAllocation *allocation,
+ gpointer user_data) : Run First
+
+The "size_request" signal
+
+void user_function (GtkWidget *widget,
+ GtkRequisition *requisition,
+ gpointer user_data) : Run First
+
+The "state_changed" signal
+
+void user_function (GtkWidget *widget,
+ GtkStateType state,
+ gpointer user_data) : Run First
+
+The "style_set" signal
+
+void user_function (GtkWidget *widget,
+ GtkStyle *previous_style,
+ gpointer user_data) : Run First
+
+The "unmap" signal
+
+void user_function (GtkWidget *widget,
+ gpointer user_data) : Run First
+
+The "unmap_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEvent *event,
+ gpointer user_data) : Run Last
+
+The "unrealize" signal
+
+void user_function (GtkWidget *widget,
+ gpointer user_data) : Run Last
+
+The "visibility_notify_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventVisibility *event,
+ gpointer user_data) : Run Last
+
+The "window_state_event" signal
+
+gboolean user_function (GtkWidget *widget,
+ GdkEventWindowState *event,
+ gpointer user_data) : Run Last
+
+The "activate_default" signal
+
+void user_function (GtkWindow *window,
+ gpointer user_data) : Run Last / Action
+
+The "activate_focus" signal
+
+void user_function (GtkWindow *window,
+ gpointer user_data) : Run Last / Action
+
+The "frame_event" signal
+
+gboolean user_function (GtkWindow *window,
+ GdkEvent *event,
+ gpointer user_data) : Run Last
+
+The "keys_changed" signal
+
+void user_function (GtkWindow *window,
+ gpointer user_data) : Run First
+
+The "set_focus" signal
+
+void user_function (GtkWindow *window,
+ GtkWidget *widget,
+ gpointer user_data) : Run Last
+
+
+
+
+The "closed" signal
+
+void user_function (GdkDisplay *display,
+ gboolean is_error,
+ gpointer user_data)
+
+The "display-opened" signal
+
+void user_function (GdkDisplayManager *display_manager,
+ GdkDisplay *display,
+ gpointer user_data)
+
+The "direction-changed" signal
+
+void user_function (GdkKeymap *keymap,
+ gpointer user_data)
+
+The "keys-changed" signal
+
+void user_function (GdkKeymap *keymap,
+ gpointer user_data)
+
+The "state-changed" signal
+
+void user_function (GdkKeymap *keymap,
+ gpointer user_data)
+
+The "composited-changed" signal
+
+void user_function (GdkScreen *screen,
+ gpointer user_data)
+
+The "monitors-changed" signal
+
+void user_function (GdkScreen *screen,
+ gpointer user_data)
+
+The "size-changed" signal
+
+void user_function (GdkScreen *screen,
+ gpointer user_data)
+
+The "from-embedder" signal
+
+void user_function (GdkWindow *window,
+ gdouble embedder_x,
+ gdouble embedder_y,
+ gpointer offscreen_x,
+ gpointer offscreen_y,
+ gpointer user_data)
+
+The "pick-embedded-child" signal
+
+GdkWindow* user_function (GdkWindow *window,
+ gdouble x,
+ gdouble y,
+ gpointer user_data)
+
+The "to-embedder" signal
+
+void user_function (GdkWindow *window,
+ gdouble offscreen_x,
+ gdouble offscreen_y,
+ gpointer embedder_x,
+ gpointer embedder_y,
+ gpointer user_data)
+
+
