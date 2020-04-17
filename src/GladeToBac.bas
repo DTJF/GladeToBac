@@ -7,7 +7,7 @@
 CONST PROJ_NAME = "GladeToBac" '                                               >
 CONST PROJ_DESC = "Glade to Freebasic code sketcher" '                         >
 CONST PROJ_VERS = "3.2.2" '                                                    >
-CONST PROJ_YEAR = "2019" '                                                     >
+CONST PROJ_YEAR = "2020" '                                                     >
 CONST PROJ_AUTH = "TJF" '                                                      >
 CONST PROJ_MAIL = "Thomas[ dot ]Freiherr{ at }gmx{ dot }net" '                 >
 CONST PROJ_WEBS = "github.com/DTJF/GladeToBac" '                               >

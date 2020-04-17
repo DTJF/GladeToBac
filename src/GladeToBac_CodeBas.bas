@@ -18,7 +18,7 @@ CONST AS STRING _
       BasIncl = "    #INCLUDE """, _
       BasUnre = "    g_object_unref("
 DIM SHARED AS STRING BasErr
-       BasErr = "#ERROR " & PROJ_NAME & ": " & *__("insert code") & "!"
+      BasErr = "#ERROR " & PROJ_NAME & ": " & *__("insert code") & "!"
 
 '/*
 '*  writing code to file >n< in folder >p<
